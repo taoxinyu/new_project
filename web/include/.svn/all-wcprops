@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/xmdns/!svn/ver/242/branches/xmdns-20.0.0/web/include
+END
+config_version.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/xmdns/!svn/ver/92/branches/xmdns-20.0.0/web/include/config_version.php
+END
+comm.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/92/branches/xmdns-20.0.0/web/include/comm.php
+END
+myfunction.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/xmdns/!svn/ver/242/branches/xmdns-20.0.0/web/include/myfunction.php
+END
+mysqlclass.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/xmdns/!svn/ver/138/branches/xmdns-20.0.0/web/include/mysqlclass.php
+END
+upgrade_inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/xmdns/!svn/ver/156/branches/xmdns-20.0.0/web/include/upgrade_inc.php
+END
+sq.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/include/sq.php
+END
+login_lock.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/xmdns/!svn/ver/150/branches/xmdns-20.0.0/web/include/login_lock.class.php
+END
+config.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/218/branches/xmdns-20.0.0/web/include/config.php
+END
+function.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/xmdns/!svn/ver/242/branches/xmdns-20.0.0/web/include/function.php
+END
+RSA.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/121/branches/xmdns-20.0.0/web/include/RSA.php
+END
+lanset.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/include/lanset.php
+END
+privilege.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/xmdns/!svn/ver/98/branches/xmdns-20.0.0/web/include/privilege.php
+END
+url_config.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/xmdns/!svn/ver/155/branches/xmdns-20.0.0/web/include/url_config.php
+END

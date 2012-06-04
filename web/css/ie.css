@@ -1,0 +1,84 @@
+#index .switch {
+	WIDTH: 6px
+}
+#index .copyright {
+	PADDING-TOP: 1px
+}
+.dtree .menu .dTreeNode IMG {
+	MARGIN-TOP: 1px
+}
+.dtree .menu .clip .dTreeNode IMG {
+	MARGIN-TOP: 3px
+}
+.common_tbl_outer {
+	MARGIN: 0px 10px
+}
+.common_tbl_outer .tfoot {
+	MARGIN: 0px
+}
+.common_tbl_outer .mpage {
+	MARGIN: 0px
+}
+.common_tbl_outer .bot {
+	MARGIN: 0px
+}
+.common_tbl_outer .tab_outer {
+	MARGIN: 0px 0px -1px
+}
+.common_tbl TH {
+	BORDER-BOTTOM: #fff 1px solid
+}
+.common_tbl TR.selected TD {
+	BACKGROUND-POSITION: 0px -400px
+}
+.common_tbl TD {
+	BORDER-BOTTOM: #ededed 1px solid; BORDER-LEFT: #ededed 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; HEIGHT: 22px; FONT-SIZE: 12px; OVERFLOW: auto; BORDER-TOP: #ededed 1px solid; BORDER-RIGHT: #ededed 1px solid; PADDING-TOP: 0px
+}
+INPUT.search_input {
+	MARGIN: 1px 0px 0px
+}
+INPUT.search_btn {
+	LINE-HEIGHT: 19px
+}
+BUTTON {
+	PADDING-RIGHT: 10px; ZOOM: 1
+}
+BUTTON DIV {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: -1px; MARGIN-LEFT: 0px
+}
+.common_alert IMG {
+	MARGIN-TOP: -1px
+}
+.common_pop_tbl .common_tbl_outer .common_tbl {
+	MARGIN-TOP: -1px
+}
+.common_pop_tbl TH SPAN {
+	PADDING-TOP: 3px
+}
+.common_pop_tbl .part2 A {
+	MARGIN-TOP: -15px
+}
+.common_pop_tbl .part2 A:hover {
+	MARGIN-TOP: -15px
+}
+.common_pop_tbl .part1 {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/xface/admin/pop_tbl_bg1.png"); BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.common_pop_tbl .part3 {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/xface/admin/pop_tbl_bg3.png"); BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.common_pop_tbl .part4 {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod= scale, src="/img/xface/admin/pop_tbl_bg4.png"); BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.common_pop_tbl .part6 {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod= scale, src="/img/xface/admin/pop_tbl_bg6.png"); BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.common_pop_tbl .part7 {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/xface/admin/pop_tbl_bg7.png"); BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.common_pop_tbl .part8 {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/xface/admin/pop_tbl_bg8.png"); BACKGROUND: none transparent scroll repeat 0% 0%
+}
+.common_pop_tbl .part9 {
+	FILTER: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/img/xface/admin/pop_tbl_bg9.png"); BACKGROUND: none transparent scroll repeat 0% 0%
+}

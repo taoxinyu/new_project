@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/xmdns/!svn/ver/242/branches/xmdns-20.0.0/web/app
+END
+manager.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/app/manager.php
+END
+info.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/xmdns/!svn/ver/222/branches/xmdns-20.0.0/web/app/info.php
+END
+list.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/xmdns/!svn/ver/95/branches/xmdns-20.0.0/web/app/list.php
+END
+applist.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/app/applist.php
+END
+reg.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/xmdns/!svn/ver/242/branches/xmdns-20.0.0/web/app/reg.php
+END
+passed.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/app/passed.php
+END
+app.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/xmdns/!svn/ver/95/branches/xmdns-20.0.0/web/app/app.php
+END
+failed.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/app/failed.php
+END
+mode.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/xmdns/!svn/ver/242/branches/xmdns-20.0.0/web/app/mode.php
+END
+ptr.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/xmdns/!svn/ver/199/branches/xmdns-20.0.0/web/app/ptr.php
+END

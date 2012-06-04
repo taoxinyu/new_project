@@ -1,0 +1,438 @@
+<? 
+include "include/comm.php";
+checkadmin();
+$licinfo=getlic();
+$sysInfo = sysinfo();
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>智能DNS主窗口</title>
+<link rel="stylesheet" type="text/css" href="divstyle.css" />
+<link href="<?php echo $netfacecss;?>" rel="stylesheet" type="text/css" />
+<style>
+.push{height:40px;}
+#interface_wrapper{height:130px;}
+#interface{position:relative;left:0px;top:7px;width:620px;magin:5px;margin:0 auto;}
+</style>
+<script src="/js/jquery.js"  type="text/javascript"></script>
+<script>
+var Sys = {};
+	var ua = navigator.userAgent.toLowerCase();
+	var s;
+	(s = ua.match(/msie ([\d.]+)/)) ? Sys.ie = s[1] :
+	(s = ua.match(/firefox\/([\d.]+)/)) ? Sys.firefox = s[1] :
+	(s = ua.match(/chrome\/([\d.]+)/)) ? Sys.chrome = s[1] :
+	(s = ua.match(/opera.([\d.]+)/)) ? Sys.opera = s[1] :
+	(s = ua.match(/version\/([\d.]+).*safari/)) ? Sys.safari = s[1] : 0;
+</script>
+<script type="text/javascript">
+
+
+function netchange(net){
+    if(window.ActiveXObject){
+    	netimg.innerHTML='<embed src="state/desktop_net.php?ifnum='+net+'" type="image/svg+xml" width="400" height="226" pluginspage="http://www.adobe.com/svg/viewer/install/auto" />';
+    }else{
+        netimg = document.getElementById('netimg');
+    	netimg.innerHTML='<embed src="state/desktop_net.php?ifnum='+net+'" type="image/svg+xml" width="400" height="226" pluginspage="http://www.adobe.com/svg/viewer/install/auto" />';
+    }
+}
+function checkTop(topn)
+{	
+	$('#topsn').load("indextopn.php?top="+topn);
+}
+function load(){
+	var n = $('#select').val();
+	if(!n)n=10;
+	checkTop(n);
+	changeifstate();
+	setTimeout("load()", 5000);
+}
+/**********netface******************/
+var timer=5000;
+var ifstate=new Array();
+var orx=Array();
+var lrx=Array(0,0,0,0,0,0,0,0);
+var otx=Array();
+var ltx=Array(0,0,0,0,0,0,0,0);
+<?php
+	$rx=array();
+	$tx=array();
+	foreach($netface as $if)
+	{
+		$rx[]=floatval(trim(`ifconfig $if|grep 'RX bytes'|cut -d: -f 2| awk '{ print $1}'`));
+		$tx[]=floatval(trim(`ifconfig $if|grep 'RX bytes'|cut -d: -f 3| awk '{ print $1}'`));
+	}
+	echo "orx=eval('('+'".json_encode($rx)."'+')');\n";
+	echo "otx=eval('('+'".json_encode($tx)."'+')');";
+?>
+function tooltiptxt(target)
+{
+	ifi=Number(target.id.substr(2));	
+	if(ifstate.length){
+		msg="<div class=\"tips\" >"+'<div style="margin:0px 0px 2px 0px;padding:0px;border-width:0px;text-align:center;font-weight:bolder;font-size:14px" >'+ifstate[ifi-1].name+'</div>';
+		msg+="接口类型："+ifstate[ifi-1].port;
+		msg+='<br>启用状态：'+ifstate[ifi-1].state2;
+		msg+="<br>IP&nbsp;&nbsp;&nbsp;地址："+ifstate[ifi-1].ip;
+		msg+='<br>双工状态：'+ifstate[ifi-1].duplex;
+		msg+='<br>连接速率：'+ifstate[ifi-1].speed;
+		msg+='<br>发送数据：'+Math.floor(parseFloat(ifstate[ifi-1].tx)/(1024*1024)*100)/100+'MB';
+		msg+='<br>发送速率：'+ Math.floor(ltx[ifi-1]/1024) +'KB/s';
+		msg+='<br>接收数据：'+Math.floor(parseFloat(ifstate[ifi-1].rx)/(1024*1024)*100)/100+'MB';
+		msg+='<br>接收速率：'+ Math.floor(lrx[ifi-1]/1024) +'KB/s';
+		msg+="</div>";
+	}else{
+		msg="数据载入中。。。";
+	}
+	return msg;
+}
+//检测并刷新网口状态
+function changeifstate()
+{
+	
+	$.getJSON("getinterfacestate.php?timeStamp=" + new Date().getTime(),function(state){
+		ifstate=state;		
+		var cnts=<?php echo count($netface)?>;         
+         for(i=1;i<cnts+1;i++)
+		{
+			ltx[i-1]=(parseFloat(ifstate[i-1].tx)-otx[i-1])/5;
+			lrx[i-1]=(parseFloat(ifstate[i-1].rx)-orx[i-1])/5;
+			otx[i-1]=parseFloat(ifstate[i-1].tx);
+			orx[i-1]=parseFloat(ifstate[i-1].rx);
+			if($.browser.msie)
+			{
+				s=ifstate[i-1].state=="1"?"100":"0";
+				av="alpha(opacity:" +s+ ")";
+				document.getElementById("if"+i).style.filter=av;
+			}
+			else
+			{
+				document.getElementById("if"+i).style.opacity=ifstate[i-1].state=="1"?"1":"0";
+			}
+		}
+	});
+}
+
+</script>
+
+</head>
+
+<body bgcolor="#f9f9f9" onload="load()">
+<script type="text/javascript" src="/js/wz_tooltip.js" ></script>
+<script type="text/javascript" src="/js/tip_followscroll.js" ></script>
+<div id="mainform">
+   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+	  <td height="28px" align="left" background="images/bg_topbg.gif">&nbsp;当前位置:&gt;&gt; 系统信息</td>
+   </tr>
+   <tr>
+      <td>
+	  <div id="interface_wrapper" class="tc">
+	  <div id="interface" >
+                <img id="back" src="<?php echo $dnsimg;?>" >  </img>
+				<?php
+				$cnts=count($netface);     
+				for($i=0;$i<$cnts;$i++){?>
+                <img class="if" id="if<?=($i+1);?>" src="/images/upstate.gif"   onmouseover="Tip(tooltiptxt(this))" onmouseout="UnTip()"  ></img>
+				<?}?>
+      </div>
+	  </div>
+	  </td>
+   </tr>
+   
+<!--流量和排名-->
+  <tr>
+	<td>
+	<table width="798" border="0" align="center" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="390">
+			<!--流量	-->
+				<table width="98%" height="340px" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#82C4E8">
+				  <tr>
+					<td height="22" align="left" background="images/bg_title.gif"><span class="zisefont">实时流量</span></td>
+				  </tr>
+				  <tr>
+					<td height="22" align="left" bgcolor="#ffffff">选择网络接口：
+					<select onchange="netchange(this.value);">
+                    <?
+					$res = $db->query("select * from netface");
+					$mo = '';
+					while($r = $db->fetchAssoc($res)){
+					if ($mo == '')
+						$mo = $r['facename'];
+					?>
+        				<option value=<?echo $r['facename'];?> <? if($r['facename']==$mylan){echo "selected=selected";}?>><? echo $r['facename'];?></option>
+		            <?}?>
+					</select>
+					</td>
+				  </tr>
+				  <tr>
+				  	<td bgcolor="#FFFFFF" id="netimg">
+				  		<embed src="state/desktop_net.php?ifnum=<?php echo $mo?>" type="image/svg+xml" width="400" height="250" pluginspage="http://www.adobe.com/svg/viewer/install/auto" />
+				  	</td>
+				  </tr>
+				  <tr>
+				  	<td height="23" bgcolor="#ffffff">如果看不到图形，可能需要安装SVG插件。<a href="svg/SVGView.exe">点击下载</a></td>
+				  </tr>
+				</table>
+			</td>
+		
+			<td width="400" align="center" >
+			<!--排名	-->
+			<div id="topsn" style="height:340px; width:390px;">
+			</div>
+			</td>
+			<?php
+			if($_GET['top']=="")
+			echo "<script type=\"text/javascript\">checkTop(10);</script>";
+			?>
+		</tr>
+	</table>
+	</td>
+  </tr> 
+
+<tr>
+  <td>&nbsp;</td>
+</tr>
+ 
+ 
+ <!--状态图   -->
+   <tr>
+     <td>
+	     <table width="798" border="0" align="center" cellpadding="0" cellspacing="0">
+           <tr>
+            <td align="center">
+			   <table width="195" border="0" cellpadding="0" cellspacing="1" bgcolor="#82C4E8">
+                  <tr>
+                    <td width="195" height="26" align="center" background="images/bg_title.gif">内存使用状态</td>
+                 </tr>
+                 <tr>
+                     <td height="140" align="center" bgcolor="#FFFFFF"><img src="getstate.php?t=1&ang=<?=$sysInfo['memPercent']?>" /></td>
+                 </tr>
+                  <tr>
+                     <td height="25" align="center" bgcolor="#f5f5f5" class="greenfont" >当前内存使用率 <?=$sysInfo['memPercent']?>%</td>
+                 </tr>
+               </table>
+		   </td>
+           <td align="center">
+			  <table width="195" border="0" cellpadding="0" cellspacing="1" bgcolor="#82C4E8">
+                 <tr>
+                   <td width="195" height="26" align="center" background="images/bg_title.gif">CPU使用状态</td>
+                 </tr>
+                 <tr>
+                    <td height="140" align="center" bgcolor="#FFFFFF">
+					<img src="getstate.php?t=2&ang=<? echo $sysInfo['cpuPercent']?>" />
+					</td>
+                </tr>
+                <tr>
+                   <td height="25" align="center" bgcolor="#f5f5f5" class="greenfont">当前CPU使用率 <? echo $sysInfo['cpuPercent']?>%</td>
+               </tr>
+             </table>
+		  </td>
+          <td align="center">
+		     <table width="195" border="0" cellpadding="0" cellspacing="1" bgcolor="#82C4E8">
+                <tr>
+                   <td width="195" height="26" align="center" background="images/bg_title.gif">存储使用状态</td>
+               </tr>
+               <tr>
+                 <td height="140" align="center" bgcolor="#FFFFFF">
+				 <img src="getstate.php?t=3&amp;ang=<? echo $sysInfo['partPercent']?>" />
+				 </td>
+               </tr>
+               <tr>
+                <td height="25" align="center"bgcolor="#f5f5f5" class="greenfont">当前存储使用率 <? echo $sysInfo['partPercent']?>%</td>
+              </tr>
+            </table>
+		</td>
+
+<!-- Top10解析比 -->		
+            <td align="center">
+
+			   <table width="195" border="0" cellpadding="0" cellspacing="1" bgcolor="#82C4E8">
+                  <tr>
+                    <td width="195" height="26" align="center" background="images/bg_title.gif">Top解析</td>
+                 </tr>
+                 <tr>
+                     <td height="140" align="center" bgcolor="#FFFFFF"><img src="getstate.php?t=1&ang=<?=$sysInfo['top']?>" /></td>
+                 </tr>
+                  <tr>
+                     <td height="25" align="center" bgcolor="#f5f5f5" class="greenfont" >Top解析比 <?=$sysInfo['top']?>%</td>
+                 </tr>
+               </table>
+		   </td> 
+		 
+		   
+     </tr>
+    </table>
+   </td>
+  </tr>
+  
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+  
+<!--信息 -->
+  <tr>
+     <td>
+	   <table width="798" border="0" align="center" cellpadding="0" cellspacing="0">
+           <tr>
+             <td width="397">
+			      <table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#82C4E8">
+		            <tr>
+                       <td height="22" colspan="2" align="center" background="images/bg_title.gif" bgcolor="#D7F5F9" class="zisefont">产 品 信 息</td>
+                    </tr>
+                    <tr>
+                       <td width="24%" height="25" align="right"  bgcolor="#e7f4ff" class="graytext">产品型号：</td>
+                       <td width="76%" height="25" align="left" bgcolor="#FFFFFF" class="greentext"><? echo $system['dnstype']?></td>
+                   </tr>
+                   <tr>
+                       <td height="25" align="right" bgcolor="#e7f4ff">产品版本：</td>
+                       <td height="25" align="left" bgcolor="#f5f5f5" class="greentext"><? echo getVersion()?> </td>
+                  </tr>
+                  <tr>
+                       <td height="25" align="right" bgcolor="#e7f4ff" class="graytext">产品授权：</td>
+                       <td height="25" align="left" bgcolor="#FFFFFF" class="greentext"><?=iconv("utf8","gbk",$licinfo['org'])?>(<a href="host/sqreg.php">系统授权</a>）</td>
+                 </tr>
+                 <tr>
+                      <td height="25" align="right" bgcolor="#e7f4ff" class="graytext">授限期限：</td>
+                      <td height="25" align="left" bgcolor="#f5f5f5" class="greentext"><? echo date("Y-m-d H:i:s",$licinfo['expire'])?></td>
+                </tr>
+                <tr>
+                      <td height="25" align="right" bgcolor="#e7f4ff" class="graytext">日志空余空间：</td>
+                      <td height="25" align="left" bgcolor="#FFFFFF" class="greentext"><span class="redtext">
+                        <?=round((@disk_free_space("/xmdns/var/log")/(1024*1024)),2)?>M</span></td>
+                </tr>
+                <tr>
+                      <td height="25" align="right" bgcolor="#e7f4ff" class="graytext">内存使用情况：</td>
+                     <td height="25" align="left" bgcolor="#f5f5f5" class="greentext">共<?=$sysInfo['memTotal']?>M, 已使用<?=$sysInfo['memUsed']?>M, 空闲<?=$sysInfo['memFree']?>M</td>
+                 </tr>
+               </table>
+		  </td>
+          <td width="397">
+		     <table width="98%" border="0" align="center" cellpadding="2" cellspacing="1" bgcolor="#82C4E8">
+              <tr>
+                <td height="22" colspan="2" align="center"background="images/bg_title.gif"><span class="zisefont">系 统 信 息</span></td>
+             </tr>
+             <tr>
+               <td width="27%" height="25" align="right"bgcolor="#e7f4ff" class="graytext">系统时间：</td>
+              <td width="73%" height="25" align="left" bgcolor="#FFFFFF" class="redtext"><?=date("Y年n月j日 H:i:s")?></td>
+            </tr>
+            <tr>
+              <td height="25" align="right" bgcolor="#e7f4ff" class="graytext">主机名称：</td>
+              <td height="25" align="left" bgcolor="#f5f5f5" class="redtext"><?=php_uname("n") ?></td>
+            </tr>
+            <tr>
+              <td height="25" align="right" bgcolor="#e7f4ff" class="graytext">登陆用户：</td>
+              <td height="25" align="left" bgcolor="#FFFFFF" class="redtext"><? echo $_SESSION['loginname'];?></td>
+           </tr>
+           <tr>
+              <td height="25" align="right" bgcolor="#e7f4ff" class="graytext">登陆IP：</td>
+<<<<<<< .mine
+              <td height="25" align="left" bgcolor="#f5f5f5" class="redtext"><? echo array_pop(explode(":",$_SESSION['loginip']));?></td>
+=======
+              <td height="25" align="left" bgcolor="#f5f5f5" class="redtext">
+			  <? echo array_pop(explode(":",$_SESSION['loginip']));?>
+			  </td>
+>>>>>>> .r194
+           </tr>
+           <tr>
+              <td height="25" align="right" bgcolor="#e7f4ff" class="graytext">服务器运行时间：</td>
+              <td height="25" align="left" bgcolor="#FFFFFF" class="redtext"><?=$sysInfo['uptime']?></td>
+          </tr>
+          <tr>
+             <td height="25" align="right" bgcolor="#e7f4ff" class="graytext">系统平均负载：</td>
+             <td height="25" align="left" bgcolor="#f5f5f5" class="redtext"><?=$sysInfo['loadAvg']?></td>
+         </tr>
+	     </table>
+	    </td>
+  </tr>
+</table>
+</td>
+</tr>
+</table><div class="push"></div>
+<? include "copyright.php";?>
+</div>
+</body>
+</html>
+
+<?
+ function sysinfo(){
+	
+	$res = array();
+ 
+	// UPTIME
+	if (false === ($str = @file("/proc/uptime"))) return false;
+	$str = explode(" ", implode("", $str));
+	$str = trim($str[0]);
+	$min = $str / 60;
+	$hours = $min / 60;
+	$days = floor($hours / 24);
+	$hours = floor($hours - ($days * 24));
+	$min = floor($min - ($days * 60 * 24) - ($hours * 60));
+	if ($days !== 0) $res['uptime'] = $days."天";
+	if ($hours !== 0) $res['uptime'] .= $hours."小时";
+	$res['uptime'] .= $min."分钟";
+	
+	//CPU
+	exec("chmod +x cgi-bin/cpu.cgi");
+	$res['cpuPercent'] = exec("cgi-bin/cpu.cgi");
+	 
+	//TOP N
+	exec(TOPSH, $rst);
+	$top = round($rst[0], 2);
+	$res['top'] = 10;
+	
+	// MEMORY
+	if (false === ($str = @file("/proc/meminfo"))) return false;
+	$str = implode("", $str);
+	preg_match_all("/MemTotal\s{0,}\:+\s{0,}([\d\.]+).+?MemFree\s{0,}\:+\s{0,}([\d\.]+).+?SwapTotal\s{0,}\:+\s{0,}([\d\.]+).+?SwapFree\s{0,}\:+\s{0,}([\d\.]+)/s", $str, $buf);
+	 
+	$res['memTotal'] = round($buf[1][0]/1024, 2);
+	exec("chmod +x cgi-bin/mem.cgi");
+	$pct = exec('cgi-bin/mem.cgi');
+	if ($pct > 58)
+	$pct = 58;
+	$res['memPercent'] = $pct;
+	$res['memUsed'] = round($buf[1][0]*$pct/100/1024, 2);
+	$res['memFree'] = $res['memTotal'] - $res['memUsed'];
+    
+	 
+	// LOAD AVG
+	if (false === ($str = @file("/proc/loadavg"))) return false;
+	$str = explode(" ", implode("", $str));
+	$str = array_chunk($str, 3);
+	$res['loadAvg'] = implode(" ", $str[0]);
+	
+	//PART
+	exec("/bin/df",$ifconfig);
+	$sum = 0;
+	$use = 0;
+	for($i=0;$i<sizeof($ifconfig);$i++){
+		if(preg_match("/\//",$ifconfig[$i]) && preg_match("/%/",$ifconfig[$i])){
+			$r = array_values(array_filter(explode(" ",$ifconfig[$i]),"filter"));
+			$sum += $r[2];
+			$use += $r[1];
+		}
+	}
+	$res['partPercent'] = round($use*100/$sum, 2);
+	
+	return $res;
+}
+function filter($var){
+	if($var == ''){
+		return false;
+	}else{
+		if(preg_match("/^[0-9]*$/",$var))
+			return true;
+		else
+			return false;
+	}
+} 
+function getVersion(){
+global $db;
+$query=$db->query("select * from setupdate where updateid=1");
+$row=$db->fetch($query);
+return $row['ver']?$row['ver']:"20.0.0";
+}
+?>

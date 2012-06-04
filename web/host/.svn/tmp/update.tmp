@@ -1,0 +1,88 @@
+#!/usr/bin/php
+<?php
+include ('../include/comm.php');
+$licurl="../license.key";
+if(!is_file($licurl)){
+echo "授权文件不存在!";
+exit(1);
+}
+$lic=file_get_contents($licurl);
+$sql="select * from setupdate";
+$query=$db->query($sql);
+$rs=$db->fetch($query);
+$post_array=array(
+"lic=".$lic,
+"ver=".$rs["ver"]
+);
+$postdata=implode("&",$post_array);
+$ch=curl_init();
+$url=$rs["updateurl"]."/upgrade/index/checkversion";
+curl_setopt($ch,CURLOPT_URL,$url);
+curl_setopt($ch,CURLOPT_POSTFIELDS,$postdata);
+curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+$content=curl_exec($ch);
+$response=Curl_getinfo($ch);
+curl_close($ch);
+if($response["http_code"]==200)
+{
+//echo $content;
+$res=json_decode($content);
+}else{
+echo "网络错误！没有得到正确的信息";
+exit(1);
+}
+if($res->error)
+{
+echo $res->msg;
+exit(1);
+}
+if($res->data->last_ver=="0")
+{
+echo "已经是最新版本";
+exit(1);
+}elseif($argc>1&&$argv[1]=="checkver")
+{
+//print_r($res->data);
+echo $res->data->last_ver;
+exit(0);
+}
+
+$info_list=$res->data->data;
+if(count($info_list))foreach($info_list as $updataObj)
+{
+install($updataObj);
+}
+echo "升级成功";
+function install($updateObj)
+{
+global $rs,$db;
+$query=$db->query("select * from setupdate where updateid=1");
+$row=$db->fetch($query);
+$pkgPath=UPGRADE_PATH.$updateObj->ver.".xmpkg";
+exec("wget ".$rs["updateurl"]."/upgrade/index/getupdate/key/".$updateObj->hash." -O ".$pkgPath,$info,$error);
+if($error)
+{
+echo "下载".$updateObj->ver."升级包时发生错误:".array_pop($info);
+exit(1);
+}
+exec("./install_pkg ".$pkgPath." ".($row['ver']?$row['ver']:"20.0.0"),$info,$error);
+if($error)
+{
+echo "安装".$updateObj->ver."升级包时发生错误:".iconv("utf8","gbk",array_pop($info));
+exit(1);
+}else{
+exec('awk \'BEGIN{FS="="}/=/{print}\' '.UPGRADE_PATH.$updateObj->ver.'.ini',$pkg_info,$error);
+foreach($pkg_info as $v){
+  list($k,$value)=explode("=",$v);
+  $pkg_info[$k]=$value;
+};
+$pkg_content=iconv("utf8","gbk",$pkg_info["pkg_info"]);
+$pkgDate=date("Y-m-d H:i:s",$pkg_info["pkgDate"]);
+$pkgType=$pkg_info["pkgType"];
+$pkgSize=format_size(filesize(UPGRADE_PATH.$updateObj->ver.".xmpkg"));
+$sql="insert into updatelog (updatetime,updatecontent,updateresult,version,pkgDate,pkgType,pkgSize) values ('".date("Y-m-d H:i:s",time())."','$pkg_content',0,'$updateObj->ver','$pkgDate','$pkgType','$pkgSize');";
+$result=$db->query($sql);
+$result=$db->query("update setupdate set ver='$updateObj->ver'");
+}
+}
+?>

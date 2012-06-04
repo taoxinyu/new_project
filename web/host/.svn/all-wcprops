@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/xmdns/!svn/ver/265/branches/xmdns-20.0.0/web/host
+END
+sethost.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/242/branches/xmdns-20.0.0/web/host/sethost.php
+END
+setdate.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/setdate.php
+END
+whois.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/whois.php
+END
+twohosts.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/xmdns/!svn/ver/223/branches/xmdns-20.0.0/web/host/twohosts.php
+END
+setlog.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/152/branches/xmdns-20.0.0/web/host/setlog.php
+END
+setmail.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/237/branches/xmdns-20.0.0/web/host/setmail.php
+END
+setupdate.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/225/branches/xmdns-20.0.0/web/host/setupdate.php
+END
+setdefault.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/setdefault.php
+END
+updateinput.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/xmdns/!svn/ver/265/branches/xmdns-20.0.0/web/host/updateinput.php
+END
+dig.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/dig.php
+END
+mohost.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/251/branches/xmdns-20.0.0/web/host/mohost.php
+END
+shutdown.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/shutdown.php
+END
+setmoacl_mode.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/setmoacl_mode.php
+END
+traceroute.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/xmdns/!svn/ver/232/branches/xmdns-20.0.0/web/host/traceroute.php
+END
+setsametime.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/setsametime.php
+END
+sqreg.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/218/branches/xmdns-20.0.0/web/host/sqreg.php
+END
+setupdatenow.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/setupdatenow.php
+END
+setip.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/119/branches/xmdns-20.0.0/web/host/setip.php
+END
+mhostlist.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/mhostlist.php
+END
+setmohost_mode.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/xmdns/!svn/ver/245/branches/xmdns-20.0.0/web/host/setmohost_mode.php
+END
+setsnmp.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/264/branches/xmdns-20.0.0/web/host/setsnmp.php
+END
+reboot.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/reboot.php
+END
+mhostzh.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/246/branches/xmdns-20.0.0/web/host/mhostzh.php
+END
+ping.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/ping.php
+END
+backup.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/243/branches/xmdns-20.0.0/web/host/backup.php
+END
+checkrec.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/xmdns/!svn/ver/231/branches/xmdns-20.0.0/web/host/checkrec.php
+END
+setips.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/119/branches/xmdns-20.0.0/web/host/setips.php
+END
+setmoacl.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/xmdns/!svn/ver/249/branches/xmdns-20.0.0/web/host/setmoacl.php
+END
+nslookup.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/host/nslookup.php
+END
+queryperf.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/203/branches/xmdns-20.0.0/web/host/queryperf.php
+END
+setmohost.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/245/branches/xmdns-20.0.0/web/host/setmohost.php
+END
+setblack.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/xmdns/!svn/ver/204/branches/xmdns-20.0.0/web/host/setblack.php
+END

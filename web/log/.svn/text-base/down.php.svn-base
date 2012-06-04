@@ -1,0 +1,36 @@
+<?php
+include ('../include/config.php');
+checklogin();
+checkac();
+function showmessage($msg,$tt="0")
+{
+	switch ($tt)
+	{
+		case '0':
+			$script = "";
+			break;
+		case '1':
+			$script = "location.href=\"".$_SESSION["HTTP_REFERER"]."\";";
+			break;
+		case '2':
+			$script = "history.back();";
+			break;
+		default:
+		 $script = "location.href=\"".$tt."\";";	
+	}
+    echo "<script language='javascript'>window.alert('".$msg."');".$script."</script>";
+    exit;	
+}
+
+$file = $_GET['file'];
+$filename = basename($_GET['file']);
+if(!strstr($filename,".log")){
+    $file=$logback.$filename;
+}else{
+    $file=$bindlogdir."logquery/".$filename;
+}
+if(!is_file($file))showmessage($filename.' 文件不存在！','logquery.php');
+header("Content-type: application/octet-stream");
+header("Content-Disposition: attachment; filename=\"".$filename."\""); 
+readfile($file);
+?>

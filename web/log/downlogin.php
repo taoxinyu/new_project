@@ -1,0 +1,25 @@
+<?php
+header("Content-type: application/octet-stream");
+$filename = 'login.log';
+header("Content-Disposition: attachment; filename=\"".$filename."\"");
+
+include('../include/config.php');
+include('../include/mysqlclass.php');
+$db = new SQL($dbfile);
+
+$sql=stripslashes($_GET['sql']);
+$query = $db->query($sql);
+	while($row1= $db->fetchAssoc($query))
+    {
+		$logid=$row1['logid'];
+		$addtime=$row1['addtime'];
+		$username=$row1['username'];
+		$userip=$row1['userip'];
+		$userstate=$row1['userstate'];
+	    echo $addtime."\t".$username."\t".$userip."\t".$userstate."\n";
+	
+	}
+
+?>
+
+

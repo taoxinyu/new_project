@@ -1,0 +1,374 @@
+@CHARSET "GB18030";
+/*.linkbtn可以点击的链接按钮*/
+.linkbtn,a,a.linkbtn
+{
+	text-decoration:none;
+	font-family:Arial,Helvetica,sans-serif,"宋体";
+	
+	color:#215D07;
+	cursor:pointer;
+}
+a:hover,.linkbtn:hover
+{
+	text-decoration:none;
+	font-family:Arial,Helvetica,sans-serif,"宋体";
+	cursor:pointer;
+	color:#AB7901!important;
+}
+a:visited,.linkbtn:visited
+{
+	text-decoration:none;
+	font-family:Arial,Helvetica,sans-serif,"宋体";
+	color:#215D07;
+	cursor:pointer;
+}
+/*.thintable表格样式,细边框,居中等*/
+table.thintable
+{
+	margin:10px auto;	
+	border-collapse:collapse;
+	background-color: #FFFFFF;
+	width:90%;
+	font-size:12px;
+}
+.thintable td, .thintable th
+{
+	border:1px solid #82C4E8;
+	font-size:12px;
+	text-align:center;
+}
+
+.divcenter,.center
+{
+	margin:10px auto;
+}
+/*表格标题*/
+.tbcaption td,.tbcaption,.thintable caption,.addform table caption
+{
+	border-style:solid solid none solid;
+	border-color:#82C4E8;
+	border-width:1px;
+	height:25px;
+	text-align:center;
+	line-height:25px;
+	padding:auto auto auto auto;
+	background-color:#D7F5F9;
+	
+	color:#0B7392;
+	font-family:宋体,Arial,Helvetica,sans-serif;
+	font-size:14px;
+	font-weight:bolder;
+}
+/*表头*/
+.thintable .tbtitle td,.thintable thead td
+{
+	background-color:#e7f4ff;
+	color:#0B7392;
+	font-weight:bolder;
+	font-family:微软雅黑,宋体,Arial,Helvetica,sans-serif;
+	font-size:12px;	
+}
+/*表格内容,鼠标悬停变色*/
+.thintable tr.content:hover,.thintable tbody tr:hover,.thintable tr:hover
+{
+	background-color:#fdffc5;
+}
+
+/*添加,修改表单样式*/
+.addform .left
+{
+	background-color:#e7f4ff;
+	text-align:right!important;
+	color:#0B7392!important;
+}
+.addform .right
+{
+	text-align:left!important;
+	background-color:#FFFFFF
+	color:#0B7392
+}
+.addform
+{
+	margin:10px auto;
+	width:400px;
+	text-align:center;
+}
+.addform table
+{
+	margin:10px auto;	
+	border-collapse:collapse;
+	background-color: #FFFFFF;
+	width:100%;
+	border:1px solid #82C4E8;	
+}
+.addform table td ,.addform table th
+{
+	color:#4D2E05;
+	border:1px solid #82C4E8;
+	/*border-right-style:none;*/
+	font-size:12px;
+	text-align:center;
+	padding:2px;
+}
+.menutext,.menutext a
+{
+	margin:25px auto 0px auto;
+	text-align:center;
+	font-weight:500;
+	font-size:13px;
+	font-family:宋体,Arial,Helvetica,sans-serif!important;
+}
+.notapp
+{
+	background-color:#FDE8E8;
+}
+.disabled
+{
+	background-color:#FFE8AB;
+}
+span.error,label.error
+{
+	color:red;
+	font-size:14px;
+	margin-left:10px;	
+}
+tfoot td,.tbfoot td
+{
+	background-color:#D7F5F9;
+	empty-cells:show;
+	height:25px;
+}
+
+
+
+
+
+
+.login {
+	MARGIN-TOP: 160px; WIDTH: 360px
+}
+.login UL {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 30px; PADDING-RIGHT: 30px; BACKGROUND: #dfe8f6; PADDING-TOP: 10px
+}
+.login UL LI {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 2px
+}
+.login UL LI SPAN {
+	LINE-HEIGHT: 22px; FLOAT: left; HEIGHT: 22px; CURSOR: pointer; MARGIN-RIGHT: 5px
+}
+.login INPUT.login_input {
+	WIDTH: 160px
+}
+.login UL LI.submit {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; PADDING-LEFT: 42px; PADDING-RIGHT: 0px; PADDING-TOP: 10px
+}
+.login UL LI.code INPUT {
+	WIDTH: 80px
+}
+.login UL LI.code IMG {
+	MARGIN: -21px 0px 0px 142px; FLOAT: left
+}
+.login_input {
+	BORDER-BOTTOM: #b5b8c8 1px solid; BORDER-LEFT: #b5b8c8 1px solid; PADDING-BOTTOM: 2px; LINE-HEIGHT: 18px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; FONT-FAMILY: 'Tahoma'; BACKGROUND: url(/img/xface/admin/common_input_bg.gif) #fff; HEIGHT: 22px; FONT-SIZE: 12px; VERTICAL-ALIGN: middle; BORDER-TOP: #b5b8c8 1px solid; BORDER-RIGHT: #b5b8c8 1px solid; PADDING-TOP: 2px
+}
+.login_input:hover {
+	BORDER-BOTTOM: #7eadd9 1px solid; BORDER-LEFT: #7eadd9 1px solid; BORDER-TOP: #7eadd9 1px solid; BORDER-RIGHT: #7eadd9 1px solid
+}
+.login_input:focus {
+	BORDER-BOTTOM: #7eadd9 1px solid; BORDER-LEFT: #7eadd9 1px solid; BORDER-TOP: #7eadd9 1px solid; BORDER-RIGHT: #7eadd9 1px solid
+}
+.login_submit {
+	WIDTH: 75px; BACKGROUND: url(../img/login_submit.gif); HEIGHT: 21px; CURSOR: pointer
+}
+.login_submit:hover {
+	WIDTH: 75px; BACKGROUND: url(../img/login_submit.gif); HEIGHT: 21px; CURSOR: pointer
+}
+.login_submit:active {
+	WIDTH: 75px; BACKGROUND: url(../img/login_submit.gif); HEIGHT: 21px; CURSOR: pointer
+}
+.login_submit:hover {
+	BACKGROUND-POSITION: 0px -21px
+}
+.login_submit:active {
+	BACKGROUND-POSITION: 0px -42px
+}
+.login UL.choose_id LI {
+	HEIGHT: 23px; OVERFLOW: auto
+}
+.login UL.choose_id LI.submit {
+	TEXT-ALIGN: center; PADDING-LEFT: 0px
+}
+#index TABLE {
+	BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed
+}
+#index .header {
+	BACKGROUND-POSITION: 0px -5px; HEIGHT: 26px
+}
+#index .header .left {
+	LINE-HEIGHT: 26px; PADDING-LEFT: 10px; FLOAT: left; HEIGHT: 26px; COLOR: #416aa2; FONT-SIZE: 14px; FONT-WEIGHT: 700
+}
+#index .header .left SMALL {
+	MARGIN-LEFT: 5px; FONT-SIZE: 11px; FONT-WEIGHT: 400
+}
+#index .header .left A {
+	COLOR: #416aa2; TEXT-DECORATION: none
+}
+#index .header .right {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 16px; PADDING-LEFT: 0px; PADDING-RIGHT: 10px; FLOAT: right; FONT-SIZE: 12px; PADDING-TOP: 5px
+}
+#index .header .right DIV {
+	FLOAT: left
+}
+#index .header .right IMG {
+	MARGIN: 0px 2px 0px 10px; VERTICAL-ALIGN: bottom
+}
+#index .header .right A:hover {
+	TEXT-DECORATION: none
+}
+#index .header .right A IMG {
+	MARGIN-RIGHT: 5px
+}
+#index .switch {
+	WIDTH: 5px
+}
+#index A.close {
+	WIDTH: 5px; DISPLAY: block; BACKGROUND: url(../img/single.gif); HEIGHT: 35px
+}
+#index A.open {
+	WIDTH: 5px; DISPLAY: block; BACKGROUND: url(../img/single.gif); HEIGHT: 35px
+}
+#index A.close:hover {
+	WIDTH: 5px; DISPLAY: block; BACKGROUND: url(../img/single.gif); HEIGHT: 35px
+}
+#index A.open:hover {
+	WIDTH: 5px; DISPLAY: block; BACKGROUND: url(../img/single.gif); HEIGHT: 35px
+}
+#index A.close {
+	BACKGROUND-POSITION: -10px -84px
+}
+#index A.close:hover {
+	BACKGROUND-POSITION: -15px -84px
+}
+#index A.open {
+	BACKGROUND-POSITION: -10px -119px
+}
+#index A.open:hover {
+	BACKGROUND-POSITION: -15px -119px
+}
+#index .mainer {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BACKGROUND: #dfe8f6; PADDING-TOP: 0px
+}
+#index .menu_outer {
+	BORDER-BOTTOM: #9abae9 1px solid; BORDER-LEFT: #9abae9 1px solid; WIDTH: 190px; BACKGROUND: #fff; BORDER-TOP: #9abae9 1px solid; BORDER-RIGHT: #9abae9 1px solid
+}
+#index .main_outer {
+	BORDER-BOTTOM: #9abae9 1px solid; BORDER-LEFT: #9abae9 1px solid; BACKGROUND: #fff; BORDER-TOP: #9abae9 1px solid; BORDER-RIGHT: #9abae9 1px solid
+}
+#index .copyright {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FONT-FAMILY: 'Arial'; BACKGROUND: #dfe8f6; HEIGHT: 20px; COLOR: #416aa2; FONT-SIZE: 10px; PADDING-TOP: 0px
+}
+#index .copyright SPAN {
+	FLOAT: right
+}
+#index .copyright FONT {
+	LINE-HEIGHT: 20px; FONT-SIZE: 12px
+}
+#menu .top {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; PADDING-TOP: 5px
+}
+#menu .top IMG {
+	VERTICAL-ALIGN: middle; MARGIN-RIGHT: 3px
+}
+#menu .top A {
+	MARGIN: 0px 3px; COLOR: #15428b
+}
+#menu .top A:hover {
+	TEXT-DECORATION: none
+}
+#menu .menu {
+	PADDING-LEFT: 10px
+}
+.dtree IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; VERTICAL-ALIGN: middle; BORDER-TOP: 0px; MARGIN-RIGHT: 3px; BORDER-RIGHT: 0px
+}
+.dtree A {
+	LINE-HEIGHT: 20px; COLOR: #333; TEXT-DECORATION: none
+}
+.dtree A.node {
+	WHITE-SPACE: nowrap
+}
+.dtree A.nodeSel {
+	WHITE-SPACE: nowrap
+}
+.dtree A.node:hover {
+	COLOR: #333; TEXT-DECORATION: underline
+}
+.dtree A.nodeSel:hover {
+	COLOR: #333; TEXT-DECORATION: underline
+}
+.dtree A.nodeSel {
+	BACKGROUND: #c0d2ec
+}
+.dtree .clip {
+	OVERFLOW: hidden
+}
+.dtree .menu .dTreeNode IMG {
+	MARGIN-TOP: -3px; MARGIN-RIGHT: 6px
+}
+.dtree .menu .clip .dTreeNode IMG {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; MARGIN-TOP: 1px; BORDER-TOP: medium none; MARGIN-RIGHT: 3px; BORDER-RIGHT: medium none
+}
+.dtree .menu .dTreeNode A:hover {
+	BACKGROUND: #c0d2ec; TEXT-DECORATION: none
+}
+.dtree .menu .dTreeNode A.doa:hover {
+	BACKGROUND: none transparent scroll repeat 0% 0%
+}
+#mainframe TABLE {
+	BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed
+}
+#mainframe .header {
+	HEIGHT: 54px
+}
+#mainframe .switch {
+	WIDTH: 10px
+}
+#mainframe .menu_outer {
+	WIDTH: 300px; BACKGROUND: #fff
+}
+#mainframe .main_outer {
+	BACKGROUND: #fff
+}
+#mainframe .help_menu_outer {
+	WIDTH: 230px; BACKGROUND: #fff
+}
+#main H1 {
+	BORDER-BOTTOM: #99bbe8 2px solid; PADDING-BOTTOM: 10px; MARGIN: 10px 25px -10px; COLOR: #3764a0; FONT-SIZE: 12px
+}
+#main UL {
+	PADDING-BOTTOM: 10px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: auto; PADDING-RIGHT: 10px; ZOOM: 1; OVERFLOW: auto; PADDING-TOP: 10px
+}
+#main UL LI {
+	MARGIN: 10px; WIDTH: 134px; DISPLAY: inline; FLOAT: left; HEIGHT: 124px
+}
+#main UL LI A {
+	BORDER-BOTTOM: white 1px solid; TEXT-ALIGN: center; BORDER-LEFT: white 1px solid; WIDTH: 132px; BACKGROUND: white; FLOAT: left; HEIGHT: 122px; BORDER-TOP: white 1px solid; BORDER-RIGHT: white 1px solid
+}
+#main UL LI A:hover {
+	BORDER-BOTTOM: #9abae9 1px solid; BORDER-LEFT: #9abae9 1px solid; BACKGROUND: #dfe8f6; BORDER-TOP: #9abae9 1px solid; BORDER-RIGHT: #9abae9 1px solid; TEXT-DECORATION: none
+}
+#main UL LI A IMG {
+	BORDER-BOTTOM: #cacaca 1px solid; BORDER-LEFT: #cacaca 1px solid; MARGIN: 5px auto 0px; WIDTH: 120px; DISPLAY: block; HEIGHT: 90px; BORDER-TOP: #cacaca 1px solid; BORDER-RIGHT: #cacaca 1px solid
+}
+#dev_log {
+	PADDING-LEFT: 20px
+}
+#dev_log H6 {
+	PADDING-BOTTOM: 0px; MARGIN: 10px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: bold 12px/20px 'Tahoma'; COLOR: green; PADDING-TOP: 0px
+}
+#dev_log UL LI {
+	PADDING-LEFT: 10px; BACKGROUND: url(../img/li_bg.gif) no-repeat left 50%
+}
+#dev_log UL LI SPAN {
+	COLOR: gray; MARGIN-LEFT: 10px
+}

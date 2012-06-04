@@ -1,0 +1,10 @@
+#!/bin/sh
+printf "Content-type: text/plain\n\n";
+
+ocpu=`cat /proc/stat |head -1 | awk '{print double ($2+$3+$4+$5)}'`
+os=`cat /proc/stat |head -1 | awk '{print double ($2+$4)}'`
+sleep 1
+ncpu=`cat /proc/stat |head -1 | awk '{print double ($2+$3+$4+$5)}'`
+ns=`cat /proc/stat |head -1 | awk '{print double ($2+$4)}'`
+printf $[($ns-$os)*100/($ncpu-$ocpu)]
+

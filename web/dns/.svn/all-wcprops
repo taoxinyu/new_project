@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/xmdns/!svn/ver/268/branches/xmdns-20.0.0/web/dns
+END
+domain_ptr.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/266/branches/xmdns-20.0.0/web/dns/domain_ptr.php
+END
+tongbu.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/dns/tongbu.php
+END
+querydata.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/xmdns/!svn/ver/180/branches/xmdns-20.0.0/web/dns/querydata.php
+END
+acl.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/xmdns/!svn/ver/259/branches/xmdns-20.0.0/web/dns/acl.php
+END
+setdns.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/268/branches/xmdns-20.0.0/web/dns/setdns.php
+END
+iplocation.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/dns/iplocation.php
+END
+acl_mode.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/246/branches/xmdns-20.0.0/web/dns/acl_mode.php
+END
+query.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/dns/query.php
+END
+acl_add.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/246/branches/xmdns-20.0.0/web/dns/acl_add.php
+END
+domain.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/268/branches/xmdns-20.0.0/web/dns/domain.php
+END
+yzf.php
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/dns/yzf.php
+END
+checkzone.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/dns/checkzone.php
+END
+domain_mode.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/xmdns/!svn/ver/194/branches/xmdns-20.0.0/web/dns/domain_mode.php
+END
+dnsreload.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/dns/dnsreload.php
+END
+record.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/102/branches/xmdns-20.0.0/web/dns/record.php
+END
+domain_add.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/193/branches/xmdns-20.0.0/web/dns/domain_add.php
+END
+record_mode.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/xmdns/!svn/ver/268/branches/xmdns-20.0.0/web/dns/record_mode.php
+END
+domaingroup.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/dns/domaingroup.php
+END
+dnsstate.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/dns/dnsstate.php
+END
+record_add.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/249/branches/xmdns-20.0.0/web/dns/record_add.php
+END
+domain_input.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/xmdns/!svn/ver/238/branches/xmdns-20.0.0/web/dns/domain_input.php
+END
+acl_ip.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/171/branches/xmdns-20.0.0/web/dns/acl_ip.php
+END
+domain_output.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xmdns/!svn/ver/227/branches/xmdns-20.0.0/web/dns/domain_output.php
+END

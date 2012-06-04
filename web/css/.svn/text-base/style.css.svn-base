@@ -1,0 +1,140 @@
+@CHARSET "GB18030";
+/*.linkbtn可以点击的链接按钮*/
+.linkbtn,a,a.linkbtn
+{
+	text-decoration:none;
+	font-family:Arial,Helvetica,sans-serif,"宋体";
+	
+	color:#215D07;
+	cursor:pointer;
+}
+a:hover,.linkbtn:hover
+{
+	text-decoration:none;
+	font-family:Arial,Helvetica,sans-serif,"宋体";
+	cursor:pointer;
+	color:#AB7901!important;
+}
+a:visited,.linkbtn:visited
+{
+	text-decoration:none;
+	font-family:Arial,Helvetica,sans-serif,"宋体";
+	color:#215D07;
+	cursor:pointer;
+}
+/*.thintable表格样式,细边框,居中等*/
+table.thintable
+{
+	margin:10px auto;	
+	border-collapse:collapse;
+	background-color: #FFFFFF;
+	width:90%;
+	font-size:12px;
+}
+.thintable td, .thintable th
+{
+	border:1px solid #82C4E8;
+	font-size:12px;
+	text-align:center;
+}
+
+.divcenter,.center
+{
+	margin:10px auto;
+}
+/*表格标题*/
+.tbcaption td,.tbcaption,.thintable caption,.addform table caption
+{
+	border-style:solid solid none solid;
+	border-color:#82C4E8;
+	border-width:1px;
+	height:25px;
+	text-align:center;
+	line-height:25px;
+	padding:auto auto auto auto;
+	background-color:#D7F5F9;
+	
+	color:#0B7392;
+	font-family:宋体,Arial,Helvetica,sans-serif;
+	font-size:14px;
+	font-weight:bolder;
+}
+/*表头*/
+.thintable .tbtitle td,.thintable thead td
+{
+	background-color:#e7f4ff;
+	color:#0B7392;
+	font-weight:bolder;
+	font-family:微软雅黑,宋体,Arial,Helvetica,sans-serif;
+	font-size:12px;	
+}
+/*表格内容,鼠标悬停变色*/
+.thintable tr.content:hover,.thintable tbody tr:hover,.thintable tr:hover
+{
+	background-color:#fdffc5;
+}
+
+/*添加,修改表单样式*/
+.addform .left
+{
+	background-color:#e7f4ff;
+	text-align:right!important;
+	color:#0B7392!important;
+}
+.addform .right
+{
+	text-align:left!important;
+	background-color:#FFFFFF
+	color:#0B7392
+}
+.addform
+{
+	margin:10px auto;
+	width:400px;
+	text-align:center;
+}
+.addform table
+{
+	margin:10px auto;	
+	border-collapse:collapse;
+	background-color: #FFFFFF;
+	width:100%;
+	border:1px solid #82C4E8;	
+}
+.addform table td ,.addform table th
+{
+	color:#4D2E05;
+	border:1px solid #82C4E8;
+	/*border-right-style:none;*/
+	font-size:12px;
+	text-align:center;
+	padding:2px;
+}
+.menutext,.menutext a
+{
+	margin:25px auto 0px auto;
+	text-align:center;
+	font-weight:500;
+	font-size:13px;
+	font-family:宋体,Arial,Helvetica,sans-serif!important;
+}
+.notapp
+{
+	background-color:#FDE8E8;
+}
+.disabled
+{
+	background-color:#FFE8AB;
+}
+span.error,label.error
+{
+	color:red;
+	font-size:14px;
+	margin-left:10px;	
+}
+tfoot td,.tbfoot td
+{
+	background-color:#D7F5F9;
+	empty-cells:show;
+	height:25px;
+}

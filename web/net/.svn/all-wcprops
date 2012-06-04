@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/xmdns/!svn/ver/233/branches/xmdns-20.0.0/web/net
+END
+setdhcp.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/209/branches/xmdns-20.0.0/web/net/setdhcp.php
+END
+dhcpuser.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/net/dhcpuser.php
+END
+dhcp.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/xmdns/!svn/ver/233/branches/xmdns-20.0.0/web/net/dhcp.php
+END
+dhcp_edit.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/net/dhcp_edit.php
+END
+dhcpserver.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/187/branches/xmdns-20.0.0/web/net/dhcpserver.php
+END
+dhcp_add.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/net/dhcp_add.php
+END

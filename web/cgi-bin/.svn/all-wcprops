@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/xmdns/!svn/ver/190/branches/xmdns-20.0.0/web/cgi-bin
+END
+bindgraph.cgi
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/cgi-bin/bindgraph.cgi
+END
+link1.cgi
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/cgi-bin/link1.cgi
+END
+mem.cgi
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/cgi-bin/mem.cgi
+END
+mem.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/190/branches/xmdns-20.0.0/web/cgi-bin/mem.c
+END
+cpumem
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/cgi-bin/cpumem
+END
+my.cgi
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/cgi-bin/my.cgi
+END
+alllink.cgi
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/cgi-bin/alllink.cgi
+END
+cpu.cgi
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/186/branches/xmdns-20.0.0/web/cgi-bin/cpu.cgi
+END
+cpumem2
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/cgi-bin/cpumem2
+END
+cpu.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/190/branches/xmdns-20.0.0/web/cgi-bin/cpu.c
+END
+liu.cgi
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/cgi-bin/liu.cgi
+END
+rate.cgi
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/cgi-bin/rate.cgi
+END
+iptemp
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/cgi-bin/iptemp
+END
+traffic
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/cgi-bin/traffic
+END

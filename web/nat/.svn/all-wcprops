@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/xmdns/!svn/ver/249/branches/xmdns-20.0.0/web/nat
+END
+dfirewall.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/xmdns/!svn/ver/153/branches/xmdns-20.0.0/web/nat/dfirewall.php
+END
+dsetfw.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/208/branches/xmdns-20.0.0/web/nat/dsetfw.php
+END
+dfirewall_mode.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/xmdns/!svn/ver/242/branches/xmdns-20.0.0/web/nat/dfirewall_mode.php
+END
+dfirewall_add.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xmdns/!svn/ver/249/branches/xmdns-20.0.0/web/nat/dfirewall_add.php
+END
+setfw.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/153/branches/xmdns-20.0.0/web/nat/setfw.php
+END

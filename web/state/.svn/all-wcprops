@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/xmdns/!svn/ver/257/branches/xmdns-20.0.0/web/state
+END
+realcpu.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/state/realcpu.php
+END
+reallan.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/state/reallan.php
+END
+desktop_net.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xmdns/!svn/ver/257/branches/xmdns-20.0.0/web/state/desktop_net.php
+END
+band.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/state/band.php
+END
+dns.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/state/dns.php
+END
+cpu.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/209/branches/xmdns-20.0.0/web/state/cpu.php
+END
+graph_net.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/xmdns/!svn/ver/257/branches/xmdns-20.0.0/web/state/graph_net.php
+END
+graph_cpu.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/xmdns/!svn/ver/257/branches/xmdns-20.0.0/web/state/graph_cpu.php
+END
+memory.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/state/memory.php
+END

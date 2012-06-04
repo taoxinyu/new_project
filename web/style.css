@@ -1,0 +1,68 @@
+*{padding:0px 0px 0px 0px;}
+body{    margin:0 0 0 0;background-color: #f9f9f9;color:#000000;font-family:  "宋体",Arial, Helvetica, sans-serif;    font-size:12px;    text-align:center;}
+/*最外层表格*/
+.daohang{ background:url(images/bg_topbg.gif); text-align:left; height:28px;}
+/*第二层表格*/
+.tablestyle{ background-color:#82C4E8; border:0px; border-spacing:1px; border-collapse:2px; }
+.caption{background:url(images/bg1.jpg);color:#ffffff;height:25px;text-align:center;}
+.whitetext{ background-color:#FFFFFF;color:#000000; height:25px; text-align:center}
+th{background:url(images/bg4.jpg); height:28px; text-align:center; font-weight:bold;}/*所有表格*/
+.tablestyle td{ height:25px; text-align:center; color:#4d2e05;}
+.bluebg{ background-color:#E7F4FF;}
+/*内部表格*/
+.intable{background-color:#CCCCCC; border:0px; border-spacing:1px; border-collapse:2px; color:#4d2e05;}
+.intable tdleft{background-color:#FFFFFF; height:25px; text-align:right;}
+.intable tdright{background-color:#FFFFFF; height:25px; text-align:left;}
+
+.blackfont{font-family:"宋体";font-size:12px;color:#000000;}
+.grayfont{font-family:"宋体";font-size:12px;color:#4d2e05;}
+.zisefont{font-family:"宋体";font-size:12px;color:#330066;}
+.redfont{font-family:"宋体";font-size:12px;color:#CC3333;}
+.greenfont{font-family:"宋体";font-size:12px;color:#01799C;}
+.whitefont{font-family:"宋体";font-size:12px;color:#ffffff;}
+a:link {font-family:  "宋体",Arial, Helvetica, sans-serif;font-size: 9pt;color: #074393;text-decoration: none;}
+a:visited {font-family:  "宋体",Arial, Helvetica, sans-serif;font-size: 9pt;color: #074393;text-decoration: none;}
+a:hover {font-family:  "宋体",Arial, Helvetica, sans-serif;font-size: 9pt;color: #ab7901;text-decoration: underline;}
+.black:link{color:#000000;}
+.black:visited{color:#000000;}
+.black:hover{color:#000000;}
+.white:link{color:#ffffff;}
+.white:visited{color:#ffffff;}
+.white:hover{color:#ffffff;}
+.inputclass{font-size:12px;border:1px  solid #0a8d8b;width:120px;}
+.yellobg{background:url(images/bg2.jpg);}
+/*.bluebg{background:url(images/bg3.jpg);}*/
+.graybg{background:url(images/bg4.jpg);}
+.orgranbg{background:url(images/bg5.jpg);}
+.graytext{color:#4d2e05;}
+.greentext{color:#056EB3;}
+.redtext{color:#d71d1d;}
+.yeetext{color:#d71d1d;font-size:14px;line-height:25px;}
+.titletext{font-family:  "宋体",Arial, Helvetica, sans-serif;font-size:14px;font-weight:bold;color:#FFFFFF;}
+.menutext{font-family:  "宋体",Arial, Helvetica, sans-serif;font-weight:bold;color:#12497C;font-size:12px;margin-left:30px;}
+
+.toptext{color:#12497C;font-size:12px;}
+.blacklink:link{color:#000000;}
+.blacklink:visited{color:#000000;}
+.blacklink:hover{color:#000000;}
+.whitelink:link{color:#ffffff;}
+.whitelink:visited{color:#ffffff;}
+.whitelink:hover{color:#ffffff;}
+.menuboldtext{color:#12497C;font-size:12px;font-weight:bold;}
+td{font-size:12px;}
+#topback{width:100%;height:67px;margin-left:auto;margin-right:auto;background:url(images/top_back.gif);}
+#top{width:1002px;height:67px;margin-left:auto;margin-right:auto;text-align:center;float:left;}
+#topoverright{width:498px;height:41px;float:left;margin-left:auto;margin-right:auto;}
+#topunder{width:498px;height:26px;float:left;margin-left:auto;margin-right:auto;text-align:center;background:url(images/top_info.gif);}
+#mainform{width:100%;height:733px;margin-left:auto;margin-right:auto;float:left;text-align:center;}
+#mainformtop{width:100%;height:36px;margin-left:auto;margin-right:auto;float:left;}
+/*左菜单样式*/
+#leftback{width:200px;height:auto;background:url(images/left_back.gif);margin-left:auto;margin-right:auto;float:left;}
+#left{width:200px;height:677px;background:url(images/left_buttomover.gif);margin-left:auto;margin-right:auto;float:left;}
+#lefttopover{margin-left:auto;margin-right:auto;float:left;}
+#lefttop{width:200px;height:29px;background:url(images/left_top.gif);margin-left:auto;margin-right:auto;float:left;}
+#leftmenuback{width:200px;height:28px;background:url(images/left_menuback.gif);margin-left:auto;margin-right:auto;float:left;}
+#leftbuttomover{width:200px;height:3px;background:url(images/left_buttomover.gif);margin-left:auto;margin-right:auto;float:left;}
+#leftbuttom{width:200px;height:17px;background:url(images/left_buttom.gif);margin-left:auto;margin-right:auto;float:left;}
+/* CSS Document */
+

@@ -1,0 +1,5 @@
+#!/bin/bash
+s=`cat /proc/net/dev |grep eth |sed 's/:/ /g'|awk '{sum1+=$2;sum2+=$10}END{print sum1+sum2}'`
+sleep 1
+p=`cat /proc/net/dev |grep eth |sed 's/:/ /g'|awk '{sum1+=$2;sum2+=$10}END{print sum1+sum2}'`
+echo "$s $p"|awk '{print $2-$1}'

@@ -1,0 +1,34 @@
+<?
+if($_GET['t']=="1")
+{$img="t1.png";}
+if($_GET['t']=="2")
+{$img="t2.png";}
+if($_GET['t']=="3")
+{$img="t3.png";}
+if(isset($_GET['ang']))
+{
+	$angle=$_GET['ang'];
+	$angle=150-2.8*$angle;
+}else 
+{
+	$angle=150;
+}
+//×ª»»½Ç¶È
+$img_path='images/'.$img;
+$img2="zz.png";
+$img_path2='images/'.$img2;
+$im=imagecreatefrompng("$img_path");
+$im2=imagecreatefrompng("$img_path2");
+//$im3=imagerotate($im2,$angle,2147483647);
+$im3=imagerotate($im2,$angle,2147483647);
+$gw=imagesx($im3);
+$gh=imagesy($im3);
+$ah=63-$gh/2;
+$aw=63-$gw/2;
+imagecopy($im,$im3,$aw,$ah,0,0,$gw,$gh);
+header('Content-type: image/png');
+imagepng($im);
+imagedestroy($im);
+imagedestroy($im2);
+imagedestroy($im3);
+?>

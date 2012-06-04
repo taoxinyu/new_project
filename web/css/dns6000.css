@@ -1,0 +1,37 @@
+@CHARSET "GB18030";
+#if1
+{
+	position:absolute;
+	left:290px;
+	top:76px;
+}
+#if2
+{
+	position:absolute;
+	left:315px;
+	top:76px;
+}
+#if3
+{
+	position:absolute;
+	left:340px;
+	top:76px;
+}
+#if4
+{
+	position:absolute;
+	left:365px;
+	top:76px;
+}
+#if5
+{
+	position:absolute;
+	left:416px;
+	top:70px;
+}
+#if6
+{
+	position:absolute;
+	left:440px;
+	top:70px;
+}

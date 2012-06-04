@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/xmdns/!svn/ver/240/branches/xmdns-20.0.0/web/route
+END
+directroute.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xmdns/!svn/ver/234/branches/xmdns-20.0.0/web/route/directroute.php
+END
+policyroute.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xmdns/!svn/ver/240/branches/xmdns-20.0.0/web/route/policyroute.php
+END
+ispinfoadd.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/route/ispinfoadd.php
+END
+directrouteadd.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/xmdns/!svn/ver/234/branches/xmdns-20.0.0/web/route/directrouteadd.php
+END
+defaultroute.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/xmdns/!svn/ver/234/branches/xmdns-20.0.0/web/route/defaultroute.php
+END
+aclroute_add.php
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/xmdns/!svn/ver/234/branches/xmdns-20.0.0/web/route/aclroute_add.php
+END
+ispinfo.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/route/ispinfo.php
+END

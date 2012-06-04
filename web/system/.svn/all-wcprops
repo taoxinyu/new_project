@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/xmdns/!svn/ver/249/branches/xmdns-20.0.0/web/system
+END
+editprivilege.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/xmdns/!svn/ver/219/branches/xmdns-20.0.0/web/system/editprivilege.php
+END
+user.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/system/user.php
+END
+actionrole.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/xmdns/!svn/ver/219/branches/xmdns-20.0.0/web/system/actionrole.php
+END
+actionprivilege.php
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/xmdns/!svn/ver/211/branches/xmdns-20.0.0/web/system/actionprivilege.php
+END
+useredit.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/xmdns/!svn/ver/249/branches/xmdns-20.0.0/web/system/useredit.php
+END
+myf.log
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/xmdns/!svn/ver/81/branches/xmdns-20.0.0/web/system/myf.log
+END
+editrole.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/xmdns/!svn/ver/243/branches/xmdns-20.0.0/web/system/editrole.php
+END
+useradd.php
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/xmdns/!svn/ver/249/branches/xmdns-20.0.0/web/system/useradd.php
+END

@@ -1,0 +1,653 @@
+BODY {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT: 12px/20px 'Tahoma'; BACKGROUND: white; PADDING-TOP: 0px
+}
+UL {
+	MARGIN: 0px auto
+}
+LI {
+	MARGIN: 0px auto
+}
+DIV {
+	MARGIN: 0px auto
+}
+H1 {
+	MARGIN: 0px auto
+}
+H2 {
+	MARGIN: 0px auto
+}
+H3 {
+	MARGIN: 0px auto
+}
+H4 {
+	MARGIN: 0px auto
+}
+H5 {
+	MARGIN: 0px auto
+}
+H6 {
+	MARGIN: 0px auto
+}
+UL {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; OVERFLOW: auto; PADDING-TOP: 0px
+}
+LI {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; OVERFLOW: auto; PADDING-TOP: 0px
+}
+H3 {
+	LINE-HEIGHT: 24px; COLOR: #15428b; FONT-SIZE: 12px
+}
+INPUT {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+IMG {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; BORDER-TOP: 0px; BORDER-RIGHT: 0px
+}
+FORM {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+A {
+	OUTLINE-STYLE: none; OUTLINE-COLOR: invert; OUTLINE-WIDTH: medium; COLOR: #15428b; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+LABEL {
+	CURSOR: pointer
+}
+.repeat_x {
+	BACKGROUND: url(../img/repeat_x.gif)
+}
+.repeat_y {
+	BACKGROUND: url(../img/repeat_y.gif)
+}
+.sbg {
+	BACKGROUND: url(../img/single.gif)
+}
+.checkbox {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; VERTICAL-ALIGN: middle; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px
+}
+.radio {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: none transparent scroll repeat 0% 0%; VERTICAL-ALIGN: middle; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 0px
+}
+.font_alert {
+	COLOR: red
+}
+.font_note {
+	COLOR: gray
+}
+UL.common_tab {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; BACKGROUND: url(../img/repeat_x.gif) 0px -41px; HEIGHT: 27px; FONT-SIZE: 12px; PADDING-TOP: 0px
+}
+UL.common_tab LI {
+	DISPLAY: inline; FLOAT: left; MARGIN-LEFT: 3px
+}
+UL.common_tab LI A:hover {
+	TEXT-DECORATION: none
+}
+UL.common_tab LI A.on {
+	LINE-HEIGHT: 20px; MARGIN-TOP: 2px; PADDING-RIGHT: 15px; BACKGROUND: url(../img/tab_on.gif) right top; FLOAT: left; HEIGHT: 22px
+}
+UL.common_tab LI A.on SPAN {
+	LINE-HEIGHT: 22px; PADDING-LEFT: 15px; DISPLAY: block; BACKGROUND: url(../img/tab_on.gif) no-repeat; COLOR: #16428b; FONT-WEIGHT: 700
+}
+UL.common_tab LI A.off {
+	LINE-HEIGHT: 20px; MARGIN-TOP: 2px; PADDING-RIGHT: 10px; BACKGROUND: url(../img/tab_off.gif) right top; FLOAT: left; HEIGHT: 22px
+}
+UL.common_tab LI A.off SPAN {
+	LINE-HEIGHT: 22px; PADDING-LEFT: 10px; DISPLAY: block; BACKGROUND: url(../img/tab_off.gif) no-repeat; COLOR: #416aa2; FONT-WEIGHT: 400
+}
+UL.common_tab LI A.off:hover {
+	LINE-HEIGHT: 20px; MARGIN-TOP: 2px; PADDING-RIGHT: 10px; BACKGROUND: url(../img/tab_off_hover.gif) right top; FLOAT: left; HEIGHT: 22px
+}
+UL.common_tab LI A.off:hover SPAN {
+	LINE-HEIGHT: 22px; PADDING-LEFT: 10px; DISPLAY: block; BACKGROUND: url(../img/tab_off_hover.gif) no-repeat; COLOR: #15428b; FONT-WEIGHT: 400
+}
+UL.common_tab IMG {
+	MARGIN: 4px 3px 0px 6px; FLOAT: left
+}
+.common_help {
+	BORDER-BOTTOM: #99bbe8 1px solid; PADDING-BOTTOM: 3px; LINE-HEIGHT: 20px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: url(../img/repeat_x.gif) #cfddf0 0px -78px; FONT-SIZE: 12px; PADDING-TOP: 3px
+}
+.common_input {
+	BORDER-BOTTOM: #b5b8c8 1px solid; BORDER-LEFT: #b5b8c8 1px solid; PADDING-BOTTOM: 0px; MARGIN: 1px 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; FONT-FAMILY: 'Tahoma'; BACKGROUND: url(../img/common_input_bg.gif) #fff; FONT-SIZE: 12px; BORDER-TOP: #b5b8c8 1px solid; BORDER-RIGHT: #b5b8c8 1px solid; PADDING-TOP: 0px
+}
+.common_input:focus {
+	BORDER-BOTTOM: #7eadd9 1px solid; BORDER-LEFT: #7eadd9 1px solid; BORDER-TOP: #7eadd9 1px solid; BORDER-RIGHT: #7eadd9 1px solid
+}
+.common_date_input:focus {
+	BORDER-BOTTOM: #7eadd9 1px solid; BORDER-LEFT: #7eadd9 1px solid; BORDER-TOP: #7eadd9 1px solid; BORDER-RIGHT: #7eadd9 1px solid
+}
+.common_input:hover {
+	BORDER-BOTTOM: #7eadd9 1px solid; BORDER-LEFT: #7eadd9 1px solid; BORDER-TOP: #7eadd9 1px solid; BORDER-RIGHT: #7eadd9 1px solid
+}
+.common_date_input:hover {
+	BORDER-BOTTOM: #7eadd9 1px solid; BORDER-LEFT: #7eadd9 1px solid; BORDER-TOP: #7eadd9 1px solid; BORDER-RIGHT: #7eadd9 1px solid
+}
+.common_date_input {
+	BORDER-BOTTOM: #b5b8c8 1px solid; BORDER-LEFT: #b5b8c8 1px solid; PADDING-BOTTOM: 0px; MARGIN: 1px 0px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; FONT-FAMILY: 'Tahoma'; BACKGROUND: url(../img/common_date_input.gif) #fff no-repeat right 50%; FONT-SIZE: 12px; BORDER-TOP: #b5b8c8 1px solid; BORDER-RIGHT: #b5b8c8 1px solid; PADDING-TOP: 0px
+}
+.readonly {
+	BORDER-BOTTOM: #7eadd9 1px solid; BORDER-LEFT: #7eadd9 1px solid; BACKGROUND: #dae7f6; BORDER-TOP: #7eadd9 1px solid; BORDER-RIGHT: #7eadd9 1px solid
+}
+.common_input {
+	PADDING-BOTTOM: 1px; MARGIN: 3px 0px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+.common_date_input {
+	PADDING-BOTTOM: 1px; MARGIN: 3px 0px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; PADDING-TOP: 1px
+}
+INPUT.search_input {
+	MARGIN: 2px 0px 0px 5px; COLOR: gray
+}
+INPUT.search_btn {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; MARGIN: 0px; WIDTH: 50px; BACKGROUND: url(../img/single.gif) -30px -83px; HEIGHT: 19px; COLOR: #15428b; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+TEXTAREA {
+	BORDER-BOTTOM: #b5b8c8 1px solid; BORDER-LEFT: #b5b8c8 1px solid; MARGIN: 5px auto; WIDTH: 100%; FONT: 12px/16px 'Tahoma'; BACKGROUND: url(../img/common_input_bg.gif) repeat-x 50% top; HEIGHT: 100px; BORDER-TOP: #b5b8c8 1px solid; BORDER-RIGHT: #b5b8c8 1px solid
+}
+TEXTAREA:focus {
+	BORDER-BOTTOM: #7eadd9 1px solid; BORDER-LEFT: #7eadd9 1px solid; BORDER-TOP: #7eadd9 1px solid; BORDER-RIGHT: #7eadd9 1px solid
+}
+.recordData {
+	BORDER-BOTTOM: #b5b8c8 1px solid; BORDER-LEFT: #b5b8c8 1px solid; MARGIN: 5px auto; WIDTH: 98%; FONT: 12px/16px 'Tahoma'; BACKGROUND: url(../img/common_input_bg.gif) repeat-x 50% top; HEIGHT: 80px; BORDER-TOP: #b5b8c8 1px solid; BORDER-RIGHT: #b5b8c8 1px solid
+}
+.common_tbl_outer {
+	PADDING-BOTTOM: 10px; MARGIN: 0px 9px 0px 11px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 10px
+}
+.common_tbl_outer .tab_outer {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: #99bbe8 1px solid; MARGIN: 0px 1px 0px -1px; BORDER-TOP: #99bbe8 1px solid; BORDER-RIGHT: #99bbe8 1px solid
+}
+.common_tbl_outer .tfoot {
+	BORDER-BOTTOM: 0px; TEXT-ALIGN: center; BORDER-LEFT: #99bbe8 1px solid; PADDING-BOTTOM: 5px; MARGIN: 0px 1px 0px -1px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; OVERFLOW: auto; BORDER-TOP: 0px; BORDER-RIGHT: #99bbe8 1px solid; PADDING-TOP: 5px
+}
+.common_tbl_outer .tfoot SPAN {
+	TEXT-ALIGN: left; LINE-HEIGHT: 24px; PADDING-LEFT: 8px; DISPLAY: block; HEIGHT: 24px
+}
+.common_tbl_outer .tfoot .page_outer {
+	MARGIN: -23px 0px 0px; PADDING-RIGHT: 5px; FLOAT: right
+}
+.common_tbl_outer .bot {
+	MARGIN: 0px 1px 0px -1px; HEIGHT: 0px; OVERFLOW: hidden; BORDER-TOP: #99bbe8 1px solid
+}
+.common_tbl {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: #99bbe8 1px solid; WIDTH: 100%; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; BORDER-TOP: #99bbe8 1px solid; BORDER-RIGHT: #99bbe8 1px solid
+}
+.common_tbl TD {
+	BORDER-BOTTOM: #ededed 1px inset; BORDER-LEFT: #ededed 1px inset; PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; HEIGHT: 22px; FONT-SIZE: 12px; OVERFLOW: auto; BORDER-TOP: #ededed 1px inset; BORDER-RIGHT: #ededed 1px inset; PADDING-TOP: 0px
+}
+.common_tbl TD A {
+	COLOR: #15428b
+}
+.common_tbl CAPTION {
+	BORDER-BOTTOM: #99bbe8 1px solid; BORDER-LEFT: #99bbe8 1px solid; BACKGROUND: #fff; MARGIN-LEFT: 0px; BORDER-TOP: #99bbe8 1px solid; BORDER-RIGHT: #99bbe8 1px solid
+}
+.common_tbl CAPTION SPAN {
+	TEXT-ALIGN: left; LINE-HEIGHT: 24px; PADDING-LEFT: 8px; DISPLAY: block; BACKGROUND: url(../img/repeat_x.gif) 0px -114px; HEIGHT: 24px; COLOR: #15428b; FONT-SIZE: 12px; FONT-WEIGHT: 700
+}
+.common_tbl CAPTION SPAN IMG {
+	MARGIN: 4px 6px 0px 0px; FLOAT: left
+}
+.common_tbl_outer .tab_outer .common_tab .search_outer {
+	PADDING-RIGHT: 5px; FLOAT: right
+}
+.common_tbl CAPTION .search_outer {
+	MARGIN: -23px 0px 0px; PADDING-RIGHT: 5px; FLOAT: right
+}
+.common_tbl TH {
+	PADDING-LEFT: 1px; BACKGROUND: #fff
+}
+.common_tbl TH SPAN {
+	TEXT-ALIGN: left; LINE-HEIGHT: 24px; PADDING-LEFT: 8px; DISPLAY: block; BACKGROUND: url(../img/grid_th_bg.gif) right 50%; HEIGHT: 24px; FONT-SIZE: 12px; OVERFLOW: hidden; FONT-WEIGHT: 400
+}
+.common_tbl TH SPAN.center {
+	TEXT-ALIGN: center; PADDING-LEFT: 0px
+}
+.common_tbl TD.t {
+	BACKGROUND: url(../img/t_bg.gif) no-repeat left top; COLOR: #444
+}
+.common_tbl TR.odd {
+	BACKGROUND: #fafafa
+}
+.common_tbl TR.highlight {
+	BACKGROUND: url(../img/tr_bg.gif) repeat-x 0px -1px
+}
+.common_tbl TR.selected TD {
+	BACKGROUND: url(../img/tr_bg.gif) repeat-x 0px -1px
+}
+.common_tbl TR.selected TD {
+	BORDER-BOTTOM: #a3bae9 1px dotted; BACKGROUND-POSITION: 0px -200px
+}
+.common_pop_tbl {
+	TABLE-LAYOUT: fixed; MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+.common_pop_tbl .common_tbl_outer {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; OVERFLOW: auto; PADDING-TOP: 0px
+}
+.common_pop_tbl .part1 {
+	WIDTH: 11px; BACKGROUND: url(../img/pop_tbl_corner.png)
+}
+.common_pop_tbl .part3 {
+	WIDTH: 11px; BACKGROUND: url(../img/pop_tbl_corner.png)
+}
+.common_pop_tbl .part7 {
+	WIDTH: 11px; BACKGROUND: url(../img/pop_tbl_corner.png)
+}
+.common_pop_tbl .part9 {
+	WIDTH: 11px; BACKGROUND: url(../img/pop_tbl_corner.png)
+}
+.common_pop_tbl .part3 {
+	BACKGROUND-POSITION: -11px 0px
+}
+.common_pop_tbl .part7 {
+	BACKGROUND-POSITION: 0px -25px; HEIGHT: 10px; OVERFLOW: hidden
+}
+.common_pop_tbl .part9 {
+	BACKGROUND-POSITION: -11px -25px; HEIGHT: 10px; OVERFLOW: hidden
+}
+.common_pop_tbl .part4 {
+	BACKGROUND: url(../img/pop_tbl_side.png)
+}
+.common_pop_tbl .part6 {
+	BACKGROUND: url(../img/pop_tbl_side.png)
+}
+.common_pop_tbl .part6 {
+	BACKGROUND-POSITION: -11px 0px
+}
+.common_pop_tbl .part2 {
+	BACKGROUND: url(../img/pop_tbl_top.png)
+}
+.common_pop_tbl .part8 {
+	BACKGROUND: url(../img/pop_tbl_top.png)
+}
+.common_pop_tbl .part8 {
+	BACKGROUND-POSITION: 0px -25px
+}
+.common_pop_tbl .part2 {
+	FONT: bold 12px/24px 'Tahoma'; COLOR: #15428b; CURSOR: move
+}
+.common_pop_tbl .part2 IMG {
+	VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+.common_pop_tbl .part2 A {
+	MARGIN-TOP: -19px; WIDTH: 15px; BACKGROUND: url(../img/ico_other.gif); FLOAT: right; HEIGHT: 15px
+}
+.common_pop_tbl .part2 A:hover {
+	MARGIN-TOP: -19px; WIDTH: 15px; BACKGROUND: url(../img/ico_other.gif); FLOAT: right; HEIGHT: 15px
+}
+.common_pop_tbl .part2 A:hover {
+	BACKGROUND-POSITION: -15px 0px
+}
+.common_pop_tbl .part5 {
+	BACKGROUND: #fff
+}
+.common_pop_tbl .common_tbl {
+	HEIGHT: auto
+}
+.common_pop_tbl .common_tbl TD {
+	HEIGHT: 100%
+}
+.width_icon {
+	WIDTH: 40px
+}
+.width_code {
+	WIDTH: 43px
+}
+.width_name {
+	WIDTH: 65px
+}
+.width_date {
+	WIDTH: 80px
+}
+.width_sex {
+	WIDTH: 43px
+}
+.width_tel {
+	WIDTH: 50px
+}
+.width_mobile {
+	WIDTH: 100px
+}
+BUTTON {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 5px; BACKGROUND: url(../img/btn.gif) right top; HEIGHT: 24px; OVERFLOW: visible; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px; PADDING-TOP: 0px
+}
+BUTTON DIV {
+	POSITION: relative; LINE-HEIGHT: 24px; MARGIN-TOP: -1px; PADDING-LEFT: 10px; WHITE-SPACE: nowrap; BACKGROUND: url(../img/btn.gif); FLOAT: left; LETTER-SPACING: 2px; HEIGHT: 24px; MARGIN-LEFT: -3px
+}
+BUTTON DIV {
+	MARGIN-TOP: -2px
+}
+x:unknown {
+	MARGIN-TOP: -2px
+}
+x:unknown {
+	MARGIN-TOP: -2px
+}
+BUTTON.add DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -24px
+}
+BUTTON.delete DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -48px
+}
+BUTTON.add_config DIV {
+	PADDING-LEFT: 30px; BACKGROUND-POSITION: 0px -72px
+}
+BUTTON.del_config DIV {
+	PADDING-LEFT: 30px; BACKGROUND-POSITION: 0px -96px
+}
+BUTTON.edit_config DIV {
+	PADDING-LEFT: 30px; BACKGROUND-POSITION: 0px -120px
+}
+BUTTON.add_db DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -144px
+}
+BUTTON.del_db DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -168px
+}
+BUTTON.edit_db DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -192px
+}
+BUTTON.save DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -216px
+}
+BUTTON.save_all DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -240px
+}
+BUTTON.email DIV {
+	PADDING-LEFT: 29px; BACKGROUND-POSITION: 0px -264px
+}
+BUTTON.add_email DIV {
+	PADDING-LEFT: 29px; BACKGROUND-POSITION: 0px -288px
+}
+BUTTON.email_attach DIV {
+	PADDING-LEFT: 29px; BACKGROUND-POSITION: 0px -312px
+}
+BUTTON.del_email DIV {
+	PADDING-LEFT: 29px; BACKGROUND-POSITION: 0px -336px
+}
+BUTTON.edit_email DIV {
+	PADDING-LEFT: 29px; BACKGROUND-POSITION: 0px -360px
+}
+BUTTON.email_go DIV {
+	PADDING-LEFT: 29px; BACKGROUND-POSITION: 0px -384px
+}
+BUTTON.video DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -408px
+}
+BUTTON.add_video DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -432px
+}
+BUTTON.del_video DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -456px
+}
+BUTTON.edit_video DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -480px
+}
+BUTTON.video_go DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -504px
+}
+BUTTON.save_video DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -528px
+}
+BUTTON.folder DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -552px
+}
+BUTTON.add_folder DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -576px
+}
+BUTTON.del_folder DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -600px
+}
+BUTTON.edit_folder DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -624px
+}
+BUTTON.folder_go DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -648px
+}
+BUTTON.search_folder DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -672px
+}
+BUTTON.ug DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -696px
+}
+BUTTON.add_ug DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -720px
+}
+BUTTON.del_ug DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -744px
+}
+BUTTON.edit_ug DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -768px
+}
+BUTTON.config_ug DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -792px
+}
+BUTTON.ug_go DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -816px
+}
+BUTTON.purview DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -840px
+}
+BUTTON.add_purview DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -864px
+}
+BUTTON.del_purview DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -888px
+}
+BUTTON.edit_purview DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -912px
+}
+BUTTON.purview_go DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -936px
+}
+BUTTON.pic DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -960px
+}
+BUTTON.add_pic DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -984px
+}
+BUTTON.del_pic DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1008px
+}
+BUTTON.edit_pic DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1032px
+}
+BUTTON.pic_go DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1056px
+}
+BUTTON.save_pic DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1080px
+}
+BUTTON.plugin DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1104px
+}
+BUTTON.add_plugin DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1128px
+}
+BUTTON.del_plugin DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1152px
+}
+BUTTON.disable_plugin DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1176px
+}
+BUTTON.edit_plugin DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1200px
+}
+BUTTON.plugin_go DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1224px
+}
+BUTTON.tag DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1248px
+}
+BUTTON.add_tag DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1272px
+}
+BUTTON.del_tag DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1296px
+}
+BUTTON.edit_tag DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1320px
+}
+BUTTON.user DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1344px
+}
+BUTTON.add_user DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1368px
+}
+BUTTON.del_user DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1392px
+}
+BUTTON.edit_user DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1416px
+}
+BUTTON.vcard DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1440px
+}
+BUTTON.add_vcard DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1464px
+}
+BUTTON.del_vcard DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1488px
+}
+BUTTON.edit_vcard DIV {
+	PADDING-LEFT: 28px; BACKGROUND-POSITION: 0px -1512px
+}
+.common_alert {
+	BORDER-BOTTOM: #99bbe8 1px dotted; BORDER-LEFT: #99bbe8 1px dotted; PADDING-BOTTOM: 5px; LINE-HEIGHT: 18px; MARGIN: 10px 10px 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; BORDER-TOP: #99bbe8 1px dotted; BORDER-RIGHT: #99bbe8 1px dotted; PADDING-TOP: 5px
+}
+.common_alert IMG {
+	MARGIN-TOP: -3px; VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+.common_form .top {
+	BACKGROUND: url(../img/form_bg.gif); HEIGHT: 24px
+}
+.common_form .top H3 {
+	BACKGROUND: url(../img/form_bg.gif) no-repeat right top; HEIGHT: 24px; MARGIN-LEFT: 10px
+}
+.common_form .top IMG {
+	MARGIN: 4px 6px 0px; FLOAT: left
+}
+.common_form .bot {
+	BACKGROUND: url(../img/form_bg.gif) left -24px; HEIGHT: 5px; OVERFLOW: hidden
+}
+.common_form .bot DIV {
+	BACKGROUND: url(../img/form_bg.gif) right -24px; HEIGHT: 5px; MARGIN-LEFT: 10px
+}
+.common_form .mid {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: #99bbe8 1px solid; BORDER-TOP: #99bbe8 1px solid; BORDER-RIGHT: #99bbe8 1px solid
+}
+.common_form .mid .inner {
+	BORDER-LEFT: #fff 1px solid; BACKGROUND: #dfe8f6; BORDER-RIGHT: #fff 1px solid
+}
+.common_form A.close {
+	MARGIN: -19px 8px 0px 0px; WIDTH: 15px; BACKGROUND: url(../img/ico_other.gif); FLOAT: right; HEIGHT: 15px
+}
+.common_form A.close:hover {
+	BACKGROUND: url(../img/ico_other.gif) -15px 0px
+}
+.p_bar {
+	BORDER-BOTTOM: #6593cf 1px solid; POSITION: relative; BORDER-LEFT: #6593cf 1px solid; BACKGROUND: url(../img/repeat_x.gif) repeat-x 0px -148px; HEIGHT: 18px; BORDER-TOP: #6593cf 1px solid; BORDER-RIGHT: #6593cf 1px solid
+}
+.p_bar_shadow {
+	BORDER-BOTTOM: #6593cf 1px solid; POSITION: relative; BORDER-LEFT: #6593cf 1px solid; BACKGROUND: url(../img/repeat_x.gif) repeat-x 0px -148px; HEIGHT: 18px; BORDER-TOP: #6593cf 1px solid; BORDER-RIGHT: #6593cf 1px solid
+}
+.p_bar .bar {
+	BACKGROUND: url(../img/pbar_bg.gif) no-repeat right 50%; FLOAT: left; HEIGHT: 18px
+}
+.p_bar_shadow .bar {
+	BACKGROUND: url(../img/pbar_bg.gif) no-repeat right 50%; FLOAT: left; HEIGHT: 18px
+}
+.p_bar .bar DIV {
+	Z-INDEX: 99; POSITION: absolute; TEXT-ALIGN: center; FONT-FAMILY: 'Verdana'; COLOR: white; FONT-SIZE: 12px; OVERFLOW: hidden; LEFT: 0px
+}
+.p_bar_shadow .bar DIV {
+	Z-INDEX: 99; POSITION: absolute; TEXT-ALIGN: center; FONT-FAMILY: 'Verdana'; COLOR: white; FONT-SIZE: 12px; OVERFLOW: hidden; LEFT: 0px
+}
+.p_bar .bar DIV B {
+	LINE-HEIGHT: 18px; DISPLAY: block; HEIGHT: 18px
+}
+.p_bar_shadow .bar DIV B {
+	LINE-HEIGHT: 18px; DISPLAY: block; HEIGHT: 18px
+}
+.p_bar .txt_back {
+	POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 18px; FONT-FAMILY: 'Verdana'; HEIGHT: 18px; COLOR: #396095; FONT-SIZE: 12px; FONT-WEIGHT: 700; LEFT: 0px
+}
+.p_bar_shadow .txt_back {
+	POSITION: absolute; TEXT-ALIGN: center; LINE-HEIGHT: 18px; FONT-FAMILY: 'Verdana'; HEIGHT: 18px; COLOR: #396095; FONT-SIZE: 12px; FONT-WEIGHT: 700; LEFT: 0px
+}
+.p_bar_shadow .bar DIV B {
+	PADDING-LEFT: 1px
+}
+UL.multipage {
+	WIDTH: 100%; OVERFLOW: auto; PADDING-TOP: 10px
+}
+UL.multipage LI {
+	LINE-HEIGHT: 20px; MARGIN: 0px 3px; DISPLAY: inline; FLOAT: left; COLOR: #444; FONT-SIZE: 12px
+}
+UL.multipage LI.current {
+	FONT-WEIGHT: 700
+}
+UL.multipage LI A {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; FLOAT: left; COLOR: #444; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid; TEXT-DECORATION: none; PADDING-TOP: 0px
+}
+UL.multipage LI A:hover {
+	BACKGROUND: #dfe8f6; TEXT-DECORATION: none
+}
+UL.multipage LI.link {
+	PADDING-BOTTOM: 8px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+UL.multipage INPUT.input {
+	BORDER-BOTTOM: #ddd 1px solid; BORDER-LEFT: #ddd 1px solid; WIDTH: 20px; FONT-FAMILY: 'Tahoma'; HEIGHT: 17px; BORDER-TOP: #ddd 1px solid; BORDER-RIGHT: #ddd 1px solid
+}
+UL.multipage INPUT.btn {
+	BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; WIDTH: 27px; BACKGROUND: url(../img/page_arrow.gif) no-repeat; HEIGHT: 21px; BORDER-TOP: 0px; CURSOR: pointer; BORDER-RIGHT: 0px
+}
+.wating {
+	Z-INDEX: 1000; POSITION: absolute; MARGIN: -17px 0px 0px -60px; WIDTH: 120px; BACKGROUND: url(../img/wating.gif); HEIGHT: 34px; TOP: 50%; LEFT: 50%
+}
+.common_tbl_outer .tfoot {
+	MARGIN-RIGHT: 0px
+}
+.common_tbl_outer .mpage {
+	MARGIN-RIGHT: 0px
+}
+.common_tbl_outer .bot {
+	MARGIN-RIGHT: 0px
+}
+x:unknown {
+	MARGIN-RIGHT: 0px
+}
+x:unknown {
+	MARGIN-RIGHT: 0px
+}
+.common_tbl_outer .tab_outer {
+	MARGIN-RIGHT: 0px
+}
+x:unknown {
+	MARGIN-RIGHT: 0px
+}
+x:unknown {
+	MARGIN-RIGHT: 0px
+}
+
+@media Unknown    
+{
+.common_tbl_outer .bot {
+	MARGIN: 0px 0px -1px
+}
+.common_tbl_outer .tfoot {
+	MARGIN: 0px 0px -1px
+}
+.common_tbl CAPTION {
+	MARGIN: 0px -1px -1px 0px
+}
+.common_tbl_outer .tab_outer {
+	MARGIN: 0px 0px -1px
+}
+.common_pop_tbl .part2 A {
+	MARGIN-TOP: 5px
+}
+.common_pop_tbl .part2 A:hover {
+	MARGIN-TOP: 5px
+}
+
+}

@@ -1,0 +1,320 @@
+<?php
+include ('../include/comm.php');
+include ('../mail/sendmail.php');
+checklogin();
+checkac();
+$mes="";
+if ($_POST['Submit']) {
+	//$db1=new SQL("pdo:database=/ximorun/ximodb/ximodb");
+	/*
+	$strOutHost="www1 192.168.0.200 ipvsadm httpd em0\n";
+	$srcOutHost="/etc/ha.d";
+	if(writeFile($srcOutHost,$strOutHost))
+	{
+		$mesNtp.="同步IP设置成功！";
+	}
+	else 
+	{
+		$mesNtp.="同步IP设置失败，请重试！";
+	}*/
+	$inHost=$_POST['inHost'];
+	$outHost=$_POST['outHost'];
+	$hosType=($_POST['hostype']==0)?$inHost:$outHost;
+	$vIP=$_POST['vIP'];
+	$vMAC=$_POST['vMAC'];
+	//$startSer=$_POST['startSer'];
+	$ripname=$_POST['ripname'];
+	$heartTime=$_POST['heartTime'];
+	$warnLog=$_POST['warnLog'];
+	$deadTime=$_POST['deadTime'];
+	$twiceTime=$_POST['twiceTime'];
+	$heartPort=$_POST['heartPort'];
+	
+	$onOff=($_POST['autoNew']==0)?$heartbeatcmd."  start":$killallcmd." heartbeat";
+
+	
+	$strHost="$hosType $vIP\n";
+	$strHeart="debugfile /var/log/ha-debug\n"."logfile /var/log/ha-log\n\n";
+	$strHeart.="bcast $ripname \n"."keepalive $heartTime\n"."warntime $warnLog\n"."deadtime $deadTime\n"."initdead $twiceTime\n"."udpport $heartPort\n"."node $inHost\n"."node $outHost\n"."auto_failback on"."\n";
+
+	if(writeFile($hostFile,$strHost) && writeFile($heartFile,$strHeart))
+	{
+		$mes.="设置保存成功";
+		$isOn="";
+		if (exec($onOff)==null) {
+			$mes.=" 开关按钮执行成功！";
+			$isOn=",autoNew='".$_POST['autoNew']."'";
+			
+			$rowmail=$db->fetchAssoc($db->query("select * from setmail"));
+		 	if($rowmail['twoHost']==1)
+		 	{
+		  		$subject='双机热备服务变更';
+		  		$nowkind=($_POST['autoNew']==0)?'开启':'关闭';
+		  		$body='您的双机热备设置信息已经重新保存，目前该服务处于'.$nowkind.'状态，特发此邮件通知。';
+		  		$sendName=split('@',$rowmail['recMail']);
+		  		sendMail($rowmail['recSmtp'],$sendName[0],$rowmail['recPWD'],$rowmail['recMail'],$subject,$body,$rowmail['sendMail']);
+		  	}
+		  
+		}
+		else 
+		{
+			$mes.=" 开关按钮执行失败，请重试。";
+		}
+		$sql="update twohost set outHost='".$outHost."',hosType='".$_POST['hostype']."',vIP='".$vIP."',vMAC='".$vMAC."',ripname='".$ripname."',heartTime='".$heartTime."',warnLog='".$warnLog."',deadTime='".$deadTime."',twiceTime='".$twiceTime."',heartPort='".$heartPort."'".$isOn;
+		if($db->query($sql))
+		{
+			$mes.="！";
+		}
+	}
+	else {
+		$mes.="失败，请重试";
+	}
+	showmessage($mes,"twohosts.php");
+}
+
+$queryOld=$db->query("select * from twohost");
+$rowOld=$db->fetchAssoc($queryOld);
+
+/*$query=$db->query("select hostname from sethost where hostid=1");
+$rows=$db->fetchAssoc($query);*/
+exec("uname -n",$arr);
+//var_dump($arr);
+
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>双机热备</title>
+<link href="/ximo_dns.css" rel="stylesheet" type="text/css" />
+<script src="/js/jquery.js"  type="text/javascript"charset="utf-8" ></script>
+<script src="/js/ximo_dns.js"  type="text/javascript" charset="utf-8"></script>
+<script language="javascript">
+function checkTwohost(){
+	if(document.twohost.outHost.value == ''){
+		alert("请输入通讯主机");
+		document.twohost.outHost.select();
+		return false;
+	}
+	else
+	{
+		if(!checkSpace(document.twohost.outHost.value))
+		{
+			alert("只能输入英文字母,数字和下划线");
+			document.twohost.outHost.select();
+			return false;
+		}
+	}
+	
+	if(document.twohost.vIP.value == ''){
+		alert("请输入虚拟IP");
+		document.twohost.vIP.select();
+		return false;
+	}
+	else
+	{
+		if(!checkip(document.twohost.vIP.value)  && !checkipv6(document.twohost.vIP.value))
+		{
+			alert("输入虚拟IP有误！");
+			document.twohost.vIP.select();
+			return false;
+		}
+	}
+	
+	if(document.twohost.heartTime.value == ''){
+		alert("请输入心跳（测试）时间");
+		document.twohost.heartTime.select();
+		return false;
+	}
+	else
+	{
+		if(!checkInt(document.twohost.heartTime.value)||document.twohost.heartTime.value<=0)
+		{
+			alert("请输入大于零的数字");
+			document.twohost.heartTime.select();
+			return false;
+		}
+	}
+	
+	if(document.twohost.warnLog.value == ''){
+		alert("请输入警告日志时间");
+		document.twohost.warnLog.select();
+		return false;
+	}
+	else
+	{
+		if(!checkInt(document.twohost.warnLog.value)||document.twohost.warnLog.value<=0)
+		{
+			alert("请输入大于零的数字");
+			document.twohost.warnLog.select();
+			return false;
+		}
+	}
+	
+	if(document.twohost.deadTime.value == ''){
+		alert("请输入宕机时间");
+		document.twohost.deadTime.select();
+		return false;
+	}
+	else
+	{
+		if(!checkInt(document.twohost.deadTime.value)||document.twohost.deadTime.value<=0)
+		{
+			alert("请输入大于零的数字");
+			document.twohost.deadTime.select();
+			return false;
+		}
+	}
+	
+	if(document.twohost.twiceTime.value == ''){
+		alert("请输入二次宕机时间");
+		document.twohost.twiceTime.select();
+		return false;
+	}
+	else
+	{
+		if(!checkInt(document.twohost.twiceTime.value)||document.twohost.deadTime.value<=0)
+		{
+			alert("请输入大于零的数字");
+			document.twohost.twiceTime.select();
+			return false;
+		}
+		if(document.twohost.twiceTime.value < 2*(document.twohost.deadTime.value))
+		{
+			alert("取值至少为宕机时间的两倍");
+			document.twohost.twiceTime.select();
+			return false;
+		}
+	}
+	
+	if(document.twohost.heartPort.value == ''){
+		alert("请输入心跳监测端口");
+		document.twohost.heartPort.select();
+		return false;
+	}
+	else
+	{
+		if(!checkInt(document.twohost.heartPort.value)||document.twohost.heartPort.value<=0)
+		{
+			alert("请输入大于零的数字");
+			document.twohost.heartPort.select();
+			return false;
+		}
+		if( document.twohost.heartPort.value >= 65535)
+		{
+			alert("请输入小于65535的数字");
+			document.twohost.heartPort.select();
+			return false;
+		}
+
+	}
+	
+	return true;
+}
+
+
+</script>
+</head>
+
+<body>
+<div class="wrap">
+<div class="position">&nbsp;当前位置:&gt;&gt; 双机热备</div>
+<div class="content">
+ <form id="twohost" name="twohost" method="post" action="twohosts.php" onsubmit="return checkTwohost()">
+      <table width="768" class="s s_form">
+       <tr>
+          <td  colspan="2"  class="caption" >双机热备</td>
+        </tr>
+         <tr>
+           <td>通讯主机：</td>
+           <td>
+           <input name="outHost" type="text" id="outHost" value="<? echo $rowOld['outHost']; ?>" size="15" />
+           <input type="hidden" name="inHost" id="inHost" value="<? echo $arr[0]?>" />
+</td>
+         </tr>
+         <tr>
+           <td>本机状态：</td>
+           <td>         
+           <select name="hostype" id="hostype">
+           <option value="0" <?php if($rowOld['hosType']=='0') echo "selected"; ?> >主机方式</option>
+           <option value="1" <?php if($rowOld['hosType']=='1') echo "selected"; ?> >备用方式</option>
+           </select>
+           </td>
+         </tr>
+         <tr>
+          <td>虚拟IP：</td>
+          <td>
+          <input name="vIP" type="text" id="vIP" value="<? echo $rowOld['vIP']; ?>" />
+</td>
+        </tr>
+        <!--tr>
+          <td width="200"    >MAC地址：</td>
+          <td width="557"   >
+          <input name="vMAC" type="text" id="vMAC" value="<? //echo $rowOld['vMAC']; ?>" />
+</td>
+        </tr-->
+        <tr>
+          <td>心跳线使用的端口：</td>
+          <td>
+             <select name="ripname" id="ripname">
+			<!--<option value="0"> </option>-->
+			<? $s = "select * from netface";
+		   $res = $db->query($s);
+		   while ($r = $db->fetchAssoc($res))
+		{ 
+        ?>
+             <option value="<?echo $r['facename']?>" <?php if($rowOld['ripname']==$r['facename']) echo "selected"; ?> ><?echo $r['facename']?></option>
+             <?php } ?>
+             </select>
+           	</td>
+        </tr>
+        <tr>
+          <td>心跳时间：</td>
+          <td><input name="heartTime" type="text" id="heartTime" value="<? echo $rowOld['heartTime']; ?>" />
+          秒&nbsp;&nbsp;设定心跳（检测）时间
+</td>
+        </tr> 
+        <tr>
+          <td>再次确定对方心跳时间：</td>
+          <td><input name="warnLog" type="text" id="warnLog" value="<? echo $rowOld['warnLog']; ?>" />
+          秒&nbsp;&nbsp;超出改时间未收到对方心跳，发出警告并记录。
+</td>
+        </tr>
+        <tr>
+          <td>宕机时间：</td>
+          <td><input name="deadTime" type="text" id="deadTime" value="<? echo $rowOld['deadTime']; ?>" />
+          秒&nbsp;&nbsp;宕机时间
+</td>
+        </tr>
+        <tr>
+          <td>再次确定对方宕机时间：</td>
+          <td><input name="twiceTime" type="text" id="twiceTime" value="<? echo $rowOld['twiceTime']; ?>" />
+          秒&nbsp;&nbsp;
+          取值至少为宕机时间的两倍。
+</td>
+        </tr>
+        <tr>
+          <td>心跳监测端口：</td>
+          <td><input name="heartPort" type="text" id="heartPort" value="<? echo $rowOld['heartPort']; ?>" />
+          (使用udp端口694 进行心跳监测)
+</td>
+        </tr>
+        <tr>
+        <td>（<?php if ($rowOld['autoNew']==1) echo "服务已关闭";else echo "服务已开启" ?>）</td>
+          <td>
+          <input type="radio" name="autoNew" id="yautoNew" value="0" <?php if($rowOld['autoNew']==0) echo "checked"; ?> />开启
+          <input type="radio" name="autoNew" id="nautoNew" value="1" <?php if($rowOld['autoNew']==1) echo "checked"; ?> />关闭
+          </td>
+        </tr>
+        <tr>
+          <td  colspan="2"  class="footer" >
+            <input type="submit" name="Submit" value="保存设置" />
+          </td>
+        </tr>
+      </table></form>
+</div><div class="push"></div>
+<? $db->close();?>
+</div>
+<? include "../copyright.php";?>
+</body>
+</html>

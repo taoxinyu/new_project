@@ -1,0 +1,27 @@
+[29-May-2010 12:16:45] PHP Fatal error:  Call to undefined method SQL::fetch_array() in /usr/local/www/system/editrole.php on line 45
+[29-May-2010 13:21:16] PHP Fatal error:  Call to undefined method SQL::fetch_array() in /usr/local/www/system/editrole.php on line 45
+[29-May-2010 13:26:00] PHP Fatal error:  Call to undefined method SQL::fetch_array() in /usr/local/www/system/editrole.php on line 45
+[29-May-2010 13:27:30] PHP Fatal error:  Call to undefined method SQL::fetch_array() in /usr/local/www/system/editrole.php on line 45
+[29-May-2010 13:57:39] PHP Fatal error:  Call to undefined method SQL::free_result() in /usr/local/www/system/editprivilege.php on line 150
+[29-May-2010 13:57:39] PHP Fatal error:  Call to undefined method SQL::free_result() in /usr/local/www/system/editprivilege.php on line 150
+[29-May-2010 13:58:26] PHP Fatal error:  Call to undefined method SQL::free_result() in /usr/local/www/system/editprivilege.php on line 150
+[29-May-2010 13:59:08] PHP Fatal error:  Call to undefined method SQL::free_result() in /usr/local/www/system/editprivilege.php on line 150
+[29-May-2010 14:26:19] PHP Fatal error:  Call to undefined method SQL::free_result() in /usr/local/www/system/editprivilege.php on line 203
+[29-May-2010 14:27:23] PHP Fatal error:  Call to undefined method SQL::free_result() in /usr/local/www/system/editprivilege.php on line 246
+[29-May-2010 14:58:14] PHP Fatal error:  Call to undefined method SQL::free_result() in /usr/local/www/system/actionprivilege.php on line 27
+[29-May-2010 15:03:36] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in Unknown on line 0
+[29-May-2010 15:08:50] PHP Notice:  Undefined offset:  1 in /usr/local/www/include/mysqlclass.php on line 39
+[29-May-2010 15:08:50] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /usr/local/www/include/mysqlclass.php:39) in /usr/local/www/include/comm.php on line 12
+[29-May-2010 15:42:33] PHP Fatal error:  Call to undefined function  oplog() in /usr/local/www/system/actionprivilege.php on line 74
+[29-May-2010 15:50:04] PHP Warning:  Cannot modify header information - headers already sent by (output started at /usr/local/www/system/actionprivilege.php:57) in /usr/local/www/system/actionprivilege.php on line 75
+[29-May-2010 15:51:50] PHP Warning:  Cannot modify header information - headers already sent by (output started at /usr/local/www/system/actionprivilege.php:57) in /usr/local/www/system/actionprivilege.php on line 75
+[29-May-2010 15:54:09] PHP Warning:  Cannot modify header information - headers already sent by (output started at /usr/local/www/system/actionprivilege.php:45) in /usr/local/www/system/actionprivilege.php on line 76
+[29-May-2010 15:54:37] PHP Warning:  Cannot modify header information - headers already sent by (output started at /usr/local/www/system/actionprivilege.php:47) in /usr/local/www/system/actionprivilege.php on line 77
+[29-May-2010 16:26:33] PHP Fatal error:  Call to undefined method SQL::free_result() in /usr/local/www/system/user.php on line 108
+[29-May-2010 16:29:14] PHP Fatal error:  Call to undefined method SQL::free_result() in /usr/local/www/system/useradd.php on line 21
+[29-May-2010 16:29:32] PHP Fatal error:  Call to undefined function  oplog() in /usr/local/www/system/useradd.php on line 22
+[31-May-2010 10:35:10] PHP Fatal error:  Call to undefined method SQL::free_result() in /usr/local/www/system/useredit.php on line 41
+[31-May-2010 10:44:21] PHP Fatal error:  Call to undefined function  oplog() in /usr/local/www/system/actionrole.php on line 12
+[31-May-2010 11:09:06] PHP Fatal error:  Call to undefined function  oplog() in /usr/local/www/system/useredit.php on line 16
+[31-May-2010 11:09:41] PHP Fatal error:  Call to undefined function  oplog() in /usr/local/www/system/user.php on line 28
+[01-Jun-2010 15:14:01] PHP Warning:  Cannot modify header information - headers already sent by (output started at /usr/local/www/system/user.php:12) in /usr/local/www/include/privilege.php on line 154

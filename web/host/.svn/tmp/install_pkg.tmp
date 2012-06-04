@@ -1,0 +1,78 @@
+#!/bin/bash
+function v_cmp(){
+        v1=$1
+        v2=$2
+        for vi in 1 2 3
+        do
+                f1=`echo $v1 | cut -d'.' -f${vi}`
+                f2=`echo $v2 | cut -d'.' -f${vi}`
+                if [ $f1 -gt $f2 ]; then
+                        echo ">"
+                        break
+                fi
+                if [ $f2 -gt $f1 ]; then
+                        echo "<"
+                        break
+                fi
+                if [ $f1 = $f2 -a $vi = 3 ]; then
+                        echo "="
+                fi
+
+        done
+}
+basedir=$(dirname $1)
+pkg=$(basename $1)
+ini_name=$(basename $1 ".xmpkg")
+cd $basedir
+if [ ! -f $pkg ];then
+echo "升级包不存在"
+exit 1
+fi
+tar zxf $pkg
+if [ ! $? = 0 ];then
+echo "解压升级包时发生错误"
+exit 1
+fi
+md5sum -c pkg.sum
+if [ ! $? = 0 ];then
+echo "检测升级包失败"
+exit 1
+fi
+rm pkg.sum
+product=`awk 'BEGIN{FS="="}/requireProduct/{print $2}' pkg.ini`
+if [ ! "$product" = "DNS" ] ; then
+echo "升级包产品类型不对或错误的升级包！"
+exit 1
+fi
+minVer=`awk 'BEGIN{FS="="}/requireMinVer/{print $2}' pkg.ini`
+pkgVer=`awk 'BEGIN{FS="="}/pkgVersion/{print $2}' pkg.ini`
+result=`v_cmp $minVer $2`
+if [ "$result" = ">" -o "$pkgVer" = "$2" ];then
+echo "升级包已经过期，升级包版本:"$pkgVer",系统版本："$2
+exit 1
+fi
+mv pkg.ini $ini_name.ini
+openssl des -d -pass pass:1987 -in pkg.etgz -out pkg.tar.gz
+if [ ! $? = 0 ];then
+echo "解码升级包失败"
+exit 1
+fi
+tar zxf pkg.tar.gz -C ./pkg
+if [ ! $? = 0 ];then
+echo "解压压缩包时发生错误"
+exit 1
+fi
+rm pkg.tar.gz
+cd pkg
+chmod o+x .ximo/install.sh
+.ximo/install.sh
+if [ ! $? = 0 ];then
+echo "安装时发生错误"
+exit 1
+fi
+<<<<<<< .mine
+rm ./*
+exit 0
+=======
+rm ./*
+exit 0>>>>>>> .r196

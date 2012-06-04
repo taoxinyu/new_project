@@ -1,0 +1,7 @@
+#!/usr/bin/perl
+use warnings;
+@meminfo=`awk '{print \$2}' "/proc/meminfo"`;
+$memuse=($meminfo[0]-$meminfo[1])/$meminfo[0] * 100;
+printf("Content-type: text/plain\n\n");
+printf("%d",$memuse);
+

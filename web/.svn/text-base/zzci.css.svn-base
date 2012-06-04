@@ -1,0 +1,95 @@
+/* CSS Document */
+
+body{
+	margin:0 0 0 0;
+	background-color: #f9f9f9;	
+	color:#0b7392;
+	font-family:  "宋体",Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align:center;
+}
+a:link {
+	font-family:  "宋体",Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #074393;
+	text-decoration: none;
+}
+a:visited {
+	font-family:  "宋体",Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #074393;
+	text-decoration: none;
+}
+
+a:hover {
+	font-family:  "宋体",Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	color: #ab7901;
+	text-decoration: underline;
+}
+.inputclass{
+
+	font-size:12px;
+	border:1px  solid #0a8d8b;
+	width:120px;
+}
+.yellobg
+{
+background:url(images/bg2.jpg);
+}
+.bluebg
+{
+background:url(images/bg3.jpg);
+}
+.greenbg
+{
+background:url(images/bg1.jpg);
+color:#FFFFFF!important;
+}
+.graybg
+{
+background:url(images/bg4.jpg);
+}
+.orgranbg
+{
+background:url(images/bg5.jpg);
+}
+.disable td{
+	background-color:#fcdfdf;
+}
+.graytext{
+color:#4d2e05;
+}
+.greentext{
+color:#4eb10c;
+}
+.redtext{
+color:#d71d1d;
+}
+.yeetext{
+color:#d71d1d;
+font-size:14px;
+line-height:25px;
+}
+.whitetext{
+color:#FFFFFF;
+}
+.titletext
+{
+font-family:  "宋体",Arial, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+color:#FFFFFF;
+}
+.menutext
+{
+font-family:  "宋体",Arial, Helvetica, sans-serif;
+font-size:12px;
+font-weight:bold;
+color:#420505;
+margin-left:30px;
+}
+td
+{
+font-size:12px;
+}
